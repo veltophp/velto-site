@@ -1,0 +1,52 @@
+{
+    "packages": [
+        {
+            "name": "veltophp/velto-core",
+            "version": "v1.0.3",
+            "version_normalized": "1.0.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/veltophp/velto-core.git",
+                "reference": "a6d4252741c428b3ab7fd17bc38b98ec4a61637b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/veltophp/velto-core/zipball/a6d4252741c428b3ab7fd17bc38b98ec4a61637b",
+                "reference": "a6d4252741c428b3ab7fd17bc38b98ec4a61637b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0"
+            },
+            "time": "2025-04-22T06:25:21+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "files": [
+                    "core/Helpers.php"
+                ],
+                "psr-4": {
+                    "Velto\\Core\\": "core/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "veltophp",
+                    "email": "dev@veltophp.com"
+                }
+            ],
+            "description": "Core framework logic for Velto PHP framework.",
+            "support": {
+                "issues": "https://github.com/veltophp/velto-core/issues",
+                "source": "https://github.com/veltophp/velto-core/tree/v1.0.3"
+            },
+            "install-path": "../veltophp/velto-core"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}
