@@ -53,7 +53,7 @@
             <div class="relative flex items-center justify-between h-16">
                 <!-- Logo - Kiri (tetap di posisi saat scroll) -->
                 <div class="">
-                    <a href="#" class="text-xl font-bold text-primary-light dark:text-primary-dark whitespace-nowrap">VeltoPHP | Docs </a>
+                    <a href="/" class="text-xl font-bold text-primary-light dark:text-primary-dark whitespace-nowrap">VeltoPHP | Docs </a>
                 </div>
                 
                 <!-- Menu - Kanan -->
@@ -91,39 +91,31 @@
         <!-- Sidebar -->
         <aside id="sidebar" class="fixed inset-y-0 left-0 z-30 w-64 h-screen pt-16 overflow-y-auto transition-transform duration-300 transform -translate-x-full bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 md:translate-x-0">
             <div class="px-4 py-4">
-                <nav class="space-y-1">
-                <div class="space-y-1">
+                <div class="space-y-1" id="navContainer">
                     <h3 class="px-3 text-sm py-4 font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">Getting Started</h3>
-                    <a href="/docs/home" class="block px-3 py-2 text-sm font-medium rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 nav-link" data-path="/docs/home">What's is Velto</a>
-                    <a href="/docs/pre-requisites" class="block px-3 py-2 text-sm font-medium rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 nav-link" data-path="/docs/pre-requisites">Pre Requisites</a>
-                    <a href="/docs/installation" class="block px-3 py-2 text-sm font-medium rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 nav-link" data-path="/docs/installation">Installing Velto</a>
+                    <a href="/docs/home" class="nav-link block px-3 py-2 text-sm font-medium rounded-md hover:bg-gray-100 dark:hover:bg-gray-700" data-path="/docs/home">What's is Velto</a>
+                    <a href="/docs/pre-requisites" class="nav-link block px-3 py-2 text-sm font-medium rounded-md hover:bg-gray-100 dark:hover:bg-gray-700" data-path="/docs/pre-requisites">Pre Requisites</a>
+                    <a href="/docs/installation" class="nav-link block px-3 py-2 text-sm font-medium rounded-md hover:bg-gray-100 dark:hover:bg-gray-700" data-path="/docs/installation">Installing Velto</a>
                 </div>
 
                 <script>
-                    // Function to set active nav item
-                    function setActiveNavItem() {
+                    // Efficient active link highlighting
+                    document.addEventListener('DOMContentLoaded', () => {
                         const currentPath = window.location.pathname;
-                        const navLinks = document.querySelectorAll('.nav-link');
-                        
-                        navLinks.forEach(link => {
+                        document.querySelectorAll('#navContainer .nav-link').forEach(link => {
                             const linkPath = link.getAttribute('data-path');
+                            const isActive = currentPath === linkPath || 
+                                        (linkPath !== '/' && currentPath.startsWith(linkPath));
                             
-                            // Check if current path starts with link path (for nested routes)
-                            if (currentPath.startsWith(linkPath)) {
-                                link.classList.add('bg-gray-100', 'dark:bg-gray-700', 'text-primary-light', 'dark:text-primary-dark');
-                                link.classList.remove('hover:bg-gray-100', 'dark:hover:bg-gray-700');
-                            } else {
-                                link.classList.remove('bg-gray-100', 'dark:bg-gray-700', 'text-primary-light', 'dark:text-primary-dark');
-                                link.classList.add('hover:bg-gray-100', 'dark:hover:bg-gray-700');
-                            }
+                            link.classList.toggle('bg-gray-100', isActive);
+                            link.classList.toggle('dark:bg-gray-700', isActive);
+                            link.classList.toggle('text-primary-light', isActive);
+                            link.classList.toggle('dark:text-primary-dark', isActive);
+                            link.classList.toggle('hover:bg-gray-100', !isActive);
+                            link.classList.toggle('dark:hover:bg-gray-700', !isActive);
                         });
-                    }
-
-                    // Run on page load and when navigating
-                    document.addEventListener('DOMContentLoaded', setActiveNavItem);
-                    window.addEventListener('popstate', setActiveNavItem); // For back/forward navigation
+                    });
                 </script>
-                </nav>
             </div>
         </aside>
 

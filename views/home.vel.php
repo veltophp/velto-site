@@ -35,7 +35,7 @@
             </p>
             
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#get-started" class="relative px-8 py-4 bg-gradient-to-r from-red-600 to-blue-600 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 overflow-hidden group">
+                <a href="/docs/home" class="relative px-8 py-4 bg-gradient-to-r from-red-600 to-blue-600 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 overflow-hidden group">
                     <span class="relative z-10 flex items-center justify-center">
                         Get Started <i class="fas fa-arrow-right ml-3 transition-transform group-hover:translate-x-1"></i>
                     </span>
@@ -54,7 +54,7 @@
                         <div class="text-gray-500 dark:text-gray-400 text-sm">Minified</div>
                     </div>
                     <div class="px-4">
-                        <div class="text-3xl font-bold text-purple-500 dark:text-purple-400">0.03ms</div>
+                        <div class="text-3xl font-bold text-purple-500 dark:text-purple-400">0.9ms</div>
                         <div class="text-gray-500 dark:text-gray-400 text-sm">Overhead</div>
                     </div>
                     <div class="px-4">
