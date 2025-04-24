@@ -340,4 +340,11 @@
         </div>
     </section>
 
+    <section class="relative overflow-hidden py-[150px] md:py-[300px]">
+        <!-- Background watermark -->
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <span class="text-[200px] md:text-[700px] font-bold opacity-5 dark:opacity-[0.1] text-gray-700 dark:text-gray-500 select-none">.vel</span>
+        </div>
+    </section>
+</div>
 @endsection
