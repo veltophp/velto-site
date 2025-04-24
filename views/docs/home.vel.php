@@ -1,7 +1,7 @@
 @extends('layouts.docs')
 
 @section('title')
-    Documentation | VeltoPHP | Version 1.x
+    Documentation | VeltoPHP | Version 1.x |
 @endsection
 
 @section('content')

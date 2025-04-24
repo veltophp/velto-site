@@ -301,7 +301,7 @@
                     <p class="text-gray-600 dark:text-gray-400 mb-4">
                         Explore our comprehensive guides and API references
                     </p>
-                    <a href="#" class="inline-flex items-center text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium">
+                    <a href="/docs/home" class="inline-flex items-center text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium">
                         Read Docs <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
@@ -330,9 +330,6 @@
                 Join developers who value simplicity and performance in their PHP projects
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#get-started" class="px-8 py-4 bg-white text-gray-900 font-medium rounded-lg shadow-lg hover:bg-gray-100 transition transform hover:-translate-y-1 flex items-center justify-center">
-                    <i class="fas fa-play-circle mr-3"></i> Get Started Now
-                </a>
                 <a href="https://github.com/veltophp/velto" target="_blank" class="px-8 py-4 bg-black/20 border border-white/20 font-medium rounded-lg hover:bg-black/30 transition transform hover:-translate-y-1 flex items-center justify-center">
                     <i class="fab fa-github mr-3"></i> GitHub Repository
                 </a>
