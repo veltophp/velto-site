@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Velto | A super lightweight PHP Framework with RVC pattern.')</title>
-    <meta name="description" content="Ultra-lightweight PHP framework for static and simple web applications. No database, no dependencies - just pure simplicity.">
+    <title>@yield('title', 'Velto PHP Framework | Fast & Minimalist RVC-Powered Web Development.')</title>
+    <meta name="description" content="Velto is a lightweight PHP framework built with the RVC (Route-View-Controller) pattern. Ideal for building fast, static, and simple web applications — no database required.">
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     @css_link
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
