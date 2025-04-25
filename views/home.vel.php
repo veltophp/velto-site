@@ -200,56 +200,56 @@
         </div>
     </section>
 
-    <!-- Use Cases Section -->
-    <section class="py-20 px-6 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-dark-900 dark:to-dark-950">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-16">
-                <span class="inline-block px-4 py-2 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-sm font-medium mb-4">USE CASES</span>
-                <h2 class="text-4xl font-bold dark:text-white mb-4">Perfect For These Projects</h2>
-                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">Velto shines in these scenarios where simplicity matters</p>
+    <!-- Combined Section with Header -->
+    <section class="py-12 px-6 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-dark-800 dark:to-dark-950">
+        <div class="max-w-7xl mx-auto">
+            <!-- Compact Header -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-3">
+                    VeltoPHP Static Website Ideas
+                </h2>
+                <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                Velto shines in these scenarios where simplicity matters.
+                </p>
             </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Use Case 1 -->
-                <div class="bg-white dark:bg-dark-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all">
-                    <div class="h-3 bg-gradient-to-r from-red-500 to-purple-500"></div>
-                    <div class="p-8">
-                        <div class="w-12 h-12 bg-red-100 dark:bg-red-900/20 rounded-lg flex items-center justify-center mb-4 text-red-500 dark:text-red-400 text-xl">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                        <h3 class="text-xl font-bold dark:text-white mb-3">Portfolio Websites</h3>
-                        <p class="text-gray-600 dark:text-gray-400">
-                            Quickly build beautiful portfolio sites with clean routing and easy content management.
-                        </p>
-                    </div>
+
+            <!-- Use Cases Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Idea Cards with Dark Mode -->
+                <div class="bg-white dark:bg-dark-700 rounded-lg shadow-md p-6 border border-gray-100 dark:border-dark-600 hover:shadow-lg transition-shadow">
+                    <div class="text-2xl mb-3">💡</div>
+                    <h3 class="text-xl font-bold mb-2 dark:text-white">Personal Portfolio</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-3">Display profile, skills, project showcase, and contact info.</p>
                 </div>
-                
-                <!-- Use Case 2 -->
-                <div class="bg-white dark:bg-dark-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all">
-                    <div class="h-3 bg-gradient-to-r from-purple-500 to-blue-500"></div>
-                    <div class="p-8">
-                        <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/20 rounded-lg flex items-center justify-center mb-4 text-purple-500 dark:text-purple-400 text-xl">
-                            <i class="fas fa-file-alt"></i>
-                        </div>
-                        <h3 class="text-xl font-bold dark:text-white mb-3">Marketing Pages</h3>
-                        <p class="text-gray-600 dark:text-gray-400">
-                            Create landing pages and marketing sites with organized code that's easy to maintain.
-                        </p>
-                    </div>
+
+                <div class="bg-white dark:bg-dark-700 rounded-lg shadow-md p-6 border border-gray-100 dark:border-dark-600 hover:shadow-lg transition-shadow">
+                    <div class="text-2xl mb-3">🧑‍🏫</div>
+                    <h3 class="text-xl font-bold mb-2 dark:text-white">Online CV / Resume</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-3">Digital resume with PDF download option.</p>
                 </div>
-                
-                <!-- Use Case 3 -->
-                <div class="bg-white dark:bg-dark-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all">
-                    <div class="h-3 bg-gradient-to-r from-blue-500 to-green-500"></div>
-                    <div class="p-8">
-                        <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/20 rounded-lg flex items-center justify-center mb-4 text-blue-500 dark:text-blue-400 text-xl">
-                            <i class="fas fa-server"></i>
-                        </div>
-                        <h3 class="text-xl font-bold dark:text-white mb-3">Microservices</h3>
-                        <p class="text-gray-600 dark:text-gray-400">
-                            Build lightweight API endpoints and microservices without unnecessary bloat.
-                        </p>
-                    </div>
+
+                <div class="bg-white dark:bg-dark-700 rounded-lg shadow-md p-6 border border-gray-100 dark:border-dark-600 hover:shadow-lg transition-shadow">
+                    <div class="text-2xl mb-3">🚀</div>
+                    <h3 class="text-xl font-bold mb-2 dark:text-white">Product Landing Page</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-3">Product info, features, pricing, and CTA buttons.</p>
+                </div>
+
+                <div class="bg-white dark:bg-dark-700 rounded-lg shadow-md p-6 border border-gray-100 dark:border-dark-600 hover:shadow-lg transition-shadow">
+                    <div class="text-2xl mb-3">🏫</div>
+                    <h3 class="text-xl font-bold mb-2 dark:text-white">Event Page</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-3">Event details with countdown timer and RSVP form.</p>
+                </div>
+
+                <div class="bg-white dark:bg-dark-700 rounded-lg shadow-md p-6 border border-gray-100 dark:border-dark-600 hover:shadow-lg transition-shadow">
+                    <div class="text-2xl mb-3">📦</div>
+                    <h3 class="text-xl font-bold mb-2 dark:text-white">SaaS Promo Page</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-3">Showcase features with pricing and testimonials.</p>
+                </div>
+
+                <div class="bg-white dark:bg-dark-700 rounded-lg shadow-md p-6 border border-gray-100 dark:border-dark-600 hover:shadow-lg transition-shadow">
+                    <div class="text-2xl mb-3">🧾</div>
+                    <h3 class="text-xl font-bold mb-2 dark:text-white">Documentation</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-3">Markdown-to-HTML docs for libraries/frameworks.</p>
                 </div>
             </div>
         </div>
