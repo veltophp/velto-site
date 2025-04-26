@@ -3,6 +3,8 @@
 namespace App\Controllers;
 
 use Velto\Core\Controller;
+use Velto\Core\Mail;
+
 
 class HomeController extends Controller {
     public function index() {
@@ -38,12 +40,5 @@ class HomeController extends Controller {
     }
 
 
-    public function example() {
-
-        $title = 'Example Page';
-
-        return view ('pages.example-page',['title' => $title]);
-
-    }
-
+    
 }
