@@ -11,7 +11,7 @@ class PagesController extends Controller
     public function example() {
         $title = 'Example Page';
     
-        $examples = require BASE_PATH . '/app/data/example-data.php';
+        $examples = require BASE_PATH . '/app/Data/example-data.php';
     
         return view('pages.example-page', [
             'title' => $title,
