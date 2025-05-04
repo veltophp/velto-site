@@ -97,6 +97,7 @@
                     <a href="/docs/home" class="nav-link block px-3 py-2 text-sm font-medium rounded-md hover:bg-gray-100 dark:hover:bg-gray-700" data-path="/docs/home">What's is Velto</a>
                     <a href="/docs/pre-requisites" class="nav-link block px-3 py-2 text-sm font-medium rounded-md hover:bg-gray-100 dark:hover:bg-gray-700" data-path="/docs/pre-requisites">Pre Requisites</a>
                     <a href="/docs/installation" class="nav-link block px-3 py-2 text-sm font-medium rounded-md hover:bg-gray-100 dark:hover:bg-gray-700" data-path="/docs/installation">Installing Velto</a>
+                    <a href="/docs/view" class="nav-link block px-3 py-2 text-sm font-medium rounded-md hover:bg-gray-100 dark:hover:bg-gray-700" data-path="/docs/view">View</a>
                 </div>
 
                 <script>
@@ -160,5 +161,14 @@
             document.documentElement.classList.add('dark');
         }
     </script>
+    <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+        <script>
+            kofiWidgetOverlay.draw('veltophp', {
+            'type': 'floating-chat',
+            'floating-chat.donateButton.text': 'Support Us',
+            'floating-chat.donateButton.background-color': '#d9534f',
+            'floating-chat.donateButton.text-color': '#fff'
+            });
+        </script>
 </body>
 </html>

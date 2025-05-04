@@ -32,6 +32,13 @@ class DocsController extends Controller
 
     }
 
+    public function view() 
+    {
+
+        return view('docs.view');
+
+    }
+
     private function getLatestVeltoVersion()
     {
         // Tentukan lokasi direktori cache

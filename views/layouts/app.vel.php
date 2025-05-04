@@ -50,11 +50,20 @@
 <body class="bg-gradient-to-br from-gray-50 to-white text-gray-800 font-sans antialiased dark:bg-gradient-to-br dark:from-dark-900 dark:to-dark-800 dark:text-gray-200 transition-colors duration-300">
     @include('components.dark-button')
     <!-- Header/Navigation -->
-    @include('components.header')
+    @include('components.navbar')
     <!-- main content -->
     @yield('content')
     <!-- Footer -->
     @include('components.footer')
     @include('components.session-notif')
+    <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+        <script>
+            kofiWidgetOverlay.draw('veltophp', {
+            'type': 'floating-chat',
+            'floating-chat.donateButton.text': 'Support Us',
+            'floating-chat.donateButton.background-color': '#d9534f',
+            'floating-chat.donateButton.text-color': '#fff'
+            });
+        </script>
 </body>
 </html>

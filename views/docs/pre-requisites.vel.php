@@ -60,7 +60,7 @@
                     <p class="text-gray-600 dark:text-gray-400">
                         To use VeltoPHP effectively, you should have a basic understanding of PHP. This includes variables, functions, arrays, control structures (if, foreach), and how PHP handles routing and templating.
                     </p>
-                    <p class="text-gray-600 dark:text-gray-400 mt-2">
+                    <p class="text-gray-600 dark:text-gray-400 mt-6">
                         If you're new to PHP, consider reviewing the basics at
                         <a href="https://www.php.net/manual/en/langref.php" class="text-blue-500 dark:text-blue-400 hover:underline">PHP Manual</a> or follow beginner tutorials like 
                         <a href="https://www.learn-php.org/" class="text-blue-500 dark:text-blue-400 hover:underline">Learn PHP</a>.

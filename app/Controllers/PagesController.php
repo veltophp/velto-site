@@ -8,47 +8,6 @@ use Velto\Core\Mail;
 
 class PagesController extends Controller
 {
-    public function example() {
-        $title = 'Example Page';
-    
-        $examples = require BASE_PATH . '/app/Data/example-data.php';
-    
-        return view('pages.example-page', [
-            'title' => $title,
-            'examples' => $examples
-        ]);
-    }    
-
-
-    public function example_1() {
-
-        return view('pages.example-1');
-    }
-
-    public function example_2() {
-
-        return view('pages.example-2');
-    }
-
-    public function example_3() {
-
-        return view('pages.example-3');
-    }
-
-    public function example_4() {
-
-        return view('pages.example-4');
-    }
-
-    public function example_5() {
-
-        return view('pages.example-5');
-    }
-
-    public function example_6() {
-
-        return view('pages.example-6');
-    }
 
 
     public function contact() {
