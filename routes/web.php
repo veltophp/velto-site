@@ -1,18 +1,23 @@
 <?php
 
+/**
+ * Web Routes
+ *
+ * Define all HTTP routes accessible via the browser here.
+ * These routes map URIs to controllers and methods that handle the request.
+ */
+
 use Velto\Core\Route;
 
-Route::get('/', 'HomeController@index');
 
-Route::get('/contact', 'PagesController@contact');
-Route::get('/about', 'PagesController@about');
-Route::post('/contact', 'PagesController@contact_send');
+Route::get('/', 'HomeController::index')->name('home');
+Route::get('/contact', 'PagesController::contact')->name('contact');
 
-// Route for documentation veltoPHP Version 1.x 
-Route::get('/docs/home', 'DocsController@docs');
-Route::get('/docs/pre-requisites', 'DocsController@pre_requisites');
-Route::get('/docs/installation', 'DocsController@installation');
-Route::get('/docs/view', 'DocsController@view');
+Route::get('/docs', 'DocsController::docs')->name('docs');
+Route::get('/docs/{folder}/{file}', 'DocsController::welcome')->name('docs.welcome');
+
+Route::post('/contact', 'PagesController::contactSend')->name('contact.send');
 
 
 
+Route::get('/coin', fn () => view('coin'));

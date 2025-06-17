@@ -3,89 +3,128 @@
 namespace App\Controllers;
 
 use Velto\Core\Controller;
+use League\CommonMark\CommonMarkConverter;
+
 
 class DocsController extends Controller
 {
     public function docs()
     {
-        $latestVersion = $this->getLatestVeltoVersion();
-
-        return view('docs.home', [
-            'latestVersion' => $latestVersion,
-        ]);
+        return view('docs.docs');
     }
+    
+    public function welcome($folder, $file)
+    {
+        $doc = "$folder/$file";
 
+        $cleanDocTitle = ''; // default
+        $parts = explode('/', $doc);
+
+        if (count($parts) == 2) {
+            $folderPart = preg_replace('/^\d+\./', '', $parts[0]);
+            $folderPart = str_replace('-', ' ', $folderPart);
+
+            $filePart = preg_replace('/^\d+(?:\.\d+)*\./', '', $parts[1]);
+            $filePart = pathinfo($filePart, PATHINFO_FILENAME);
+            $filePart = str_replace('-', ' ', $filePart);
+
+            $cleanDocTitle = ucwords($folderPart) . ' | ' . $filePart;
+        }
 
     
-
-    public function pre_requisites() 
-    {
-
-        return view('docs.pre-requisites');
-
-    }
-
-    public function installation() 
-    {
-
-        return view('docs.installation');
-
-    }
-
-    public function view() 
-    {
-
-        return view('docs.view');
-
-    }
-
-    private function getLatestVeltoVersion()
-    {
-        // Tentukan lokasi direktori cache
-        $cacheDir = dirname(__DIR__, 2) . '/storage/cache';
-        $cacheFile = $cacheDir . '/version.cache';
-        $cacheTTL = 86400; // 1 hari dalam detik
-
-        // Cek dan buat folder cache jika belum ada
-        if (!is_dir($cacheDir)) {
-            mkdir($cacheDir, 0755, true); // Buat folder dan subfolder
+        $doc = trim($doc, '/');
+        if (strpos($doc, '..') !== false) {
+            abort(400, 'Invalid document path');
         }
-
-        // Jika cache ada dan masih valid
-        if (file_exists($cacheFile) && (time() - filemtime($cacheFile)) < $cacheTTL) {
-            // Ambil data dari cache dan kembalikan
-            return trim(file_get_contents($cacheFile));
+    
+        $filePath = root_path("docs/$doc.md");
+    
+        if (!file_exists($filePath)) {
+            abort(404, 'Documentation not found');
         }
-
-        // Jika cache tidak ada atau sudah kadaluarsa, ambil data dari GitHub
-        $url = 'https://api.github.com/repos/veltophp/velto/tags';
-        $token = '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';
+    
+        $markdown = file_get_contents($filePath);
+        $converter = new CommonMarkConverter();
+        $html = (string) $converter->convert($markdown);
+    
+        $files = $this->getAllDocsFiles(root_path('docs'));
+    
+        $docsList = array_map(function ($path) {
+            return str_replace('\\', '/', substr($path, strlen(root_path('docs/') ))); 
+        }, $files);
+    
+        usort($docsList, function ($a, $b) {
+            return version_compare($a, $b);
+        });
+    
+        $docsCategories = [];
+        $docsSubCategories = [];
+    
+        foreach ($docsList as $item) {
+            $parts = explode('/', $item);
+            if (count($parts) == 2) {
+                $folder = $parts[0];
+                $filename = $parts[1];
         
-        // Setup header untuk request ke GitHub
-        $options = [
-            "http" => [
-                "header" => "User-Agent: VeltoClient\r\nAuthorization: token $token\r\n"
-            ]
-        ];
-
-        // Ambil data dari GitHub
-        $context = stream_context_create($options);
-        $response = file_get_contents($url, false, $context);
-
-        if ($response === false) {
-            // Jika gagal ambil data, return 'Unknown' atau nilai default
-            return 'Unknown';
+                $cleanFolderTitle = preg_replace('/^\d+\./', '', $folder);        
+                $cleanFolderTitle = str_replace('-', ' ', $cleanFolderTitle);    
+                $cleanFolderTitle = ucwords($cleanFolderTitle);
+        
+                if (!isset($docsCategories[$folder])) {
+                    $docsCategories[$folder] = [
+                        'key' => $folder,
+                        'title' => $cleanFolderTitle,
+                    ];
+                }
+        
+                if (preg_match('/^\d+(?:\.\d+)*\.(.+)$/', $filename, $m)) {
+                    $nameWithoutExtension = pathinfo($m[1], PATHINFO_FILENAME); 
+                    $cleanFileTitle = preg_replace('/^\d+\./', '', $nameWithoutExtension); 
+                    $cleanFileTitle = str_replace('-', ' ', $cleanFileTitle);            
+                    // $cleanFileTitle = ucwords($cleanFileTitle);                
+        
+                    $docsSubCategories[$folder][] = [
+                        'key' => $item,
+                        'title' => $cleanFileTitle,
+                    ];
+                }
+            }
         }
-
-        // Decode hasil dari JSON
-        $tags = json_decode($response, true);
-        $latest = $tags[0]['name'] ?? 'Unknown'; // Ambil versi terbaru, default jika tidak ada
-
-        // Simpan hasil ke dalam cache
-        file_put_contents($cacheFile, $latest);
-
-        // Kembalikan hasil versi terbaru
-        return $latest;
+        
+    
+        return view('docs/docs-veltophp', [
+            'content' => $html,
+            'doc' => $doc,
+            'cleanDocTitle' => $cleanDocTitle,
+            'docsCategories' => $docsCategories,
+            'docsSubCategories' => $docsSubCategories,
+            'docsList' => $docsList,
+        ]);
     }
+    
+    /**
+     * Fungsi rekursif ambil semua file .md dari folder dan subfolder
+     */
+    private function getAllDocsFiles($dir)
+    {
+        $files = [];
+        $items = scandir($dir);
+    
+        foreach ($items as $item) {
+            if ($item === '.' || $item === '..') {
+                continue;
+            }
+            $path = $dir . DIRECTORY_SEPARATOR . $item;
+    
+            if (is_dir($path)) {
+                $files = array_merge($files, $this->getAllDocsFiles($path));
+            } elseif (is_file($path) && pathinfo($path, PATHINFO_EXTENSION) === 'md') {
+                $files[] = $path;
+            }
+        }
+    
+        return $files;
+    }
+    
 
 }

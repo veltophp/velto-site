@@ -5,343 +5,70 @@
 @endsection
 
 @section('content')
-
-    <!-- Animated Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center px-6 pt-36 md:pt-16 overflow-hidden">
-        <!-- Background gradient circles -->
-        <div class="absolute inset-0 overflow-hidden">
-            <div class="absolute -top-64 -left-64 w-[800px] h-[800px] bg-gradient-to-br from-red-500/10 to-transparent rounded-full filter blur-3xl opacity-40 dark:opacity-30 animate-float-slow"></div>
-            <div class="absolute -bottom-96 -right-64 w-[900px] h-[900px] bg-gradient-to-tl from-blue-500/10 to-transparent rounded-full filter blur-3xl opacity-40 dark:opacity-30 animate-float-slower"></div>
-        </div>
+<div class="container mx-auto px-4 pt-32 max-w-6xl text-center">
+    <div class="text-center text-sm text-gray-700 dark:text-gray-300 py-6 px-4">
+        <span class="italic">Bug report, contribution, or donation</span> — email us at 
+        <a href="mailto:dev@veltophp.com" class="underline text-red-600 dark:text-red-400 hover:text-red-500">dev@veltophp.com</a>
+    </div>  
+    <!-- Hero Section -->
+    <section class="mb-28">
+        <h1 class="text-4xl md:text-6xl font-light text-gray-900 dark:text-gray-100 mb-6 leading-tight tracking-tight">
+            Build Web Apps <span class="font-semibold text-red-500">Faster</span> with <span class="text-gray-800 dark:text-white">VeltoPHP</span>
+        </h1>
         
-        <div class="relative z-10 text-center max-w-5xl">
-            <!-- Animated logo/badge -->
-            <div class="relative mx-auto w-28 h-28 mb-8 group">
-                <div class="absolute inset-0 bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 rounded-2xl shadow-2xl transform group-hover:rotate-6 transition duration-500"></div>
-                <div class="absolute inset-1 bg-white dark:bg-dark-800 rounded-xl shadow-inner flex items-center justify-center transform group-hover:-rotate-3 transition duration-500">
-                    <span class="font-mono font-bold text-3xl bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">.vel</span>
-                </div>
-            </div>
-            
-            <div class="relative inline-block">
-                <h1 class="text-5xl sm:text-7xl font-extrabold mb-6 bg-gradient-to-r from-red-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
-                    {{ $title }}
-                </h1>
-                <span class="absolute top-0 right-0 text-md font-bold translate-x-10">{{ $latestVersion }}</span>
-            </div>
-            
-            <p class="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
-                The <span class="font-semibold text-red-500 dark:text-red-400">lightweight</span> PHP framework with <span class="font-semibold text-purple-500 dark:text-purple-400">RVC architecture</span> — perfect for modern static web projects</span>
-            </p>
-            
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="/docs/home" class="relative px-8 py-4 bg-gradient-to-r from-red-600 to-blue-600 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 overflow-hidden group">
-                    <span class="relative z-10 flex items-center justify-center">
-                        Get Started <i class="fas fa-arrow-right ml-3 transition-transform group-hover:translate-x-1"></i>
-                    </span>
-                    <div class="absolute inset-0 bg-gradient-to-r from-red-700 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                </a>
-                <a href="https://github.com/veltophp/velto" target="_blank" class="px-8 py-4 bg-white dark:bg-dark-700 border border-gray-200 dark:border-dark-600 font-medium rounded-lg shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
-                    <i class="fab fa-github mr-3"></i> Star on GitHub
-                </a>
-            </div>
-            
-            <!-- Stats bar -->
-            <div class="mt-16 p-6 bg-white dark:bg-dark-800/50 backdrop-blur-sm rounded-xl border border-gray-200 dark:border-dark-700 shadow-sm max-w-2xl mx-auto">
-                <div class="flex flex-wrap justify-center gap-6 text-center">
-                    <div class="px-4">
-                        <div class="text-3xl font-bold text-green-500 dark:text-green-400">&lt;1Mb</div>
-                        <div class="text-gray-500 dark:text-gray-400 text-sm">Lightweight</div>
-                    </div>
-                    <div class="px-4">
-                        <div class="text-3xl font-bold text-purple-500 dark:text-purple-400">&lt;10ms</div>
-                        <div class="text-gray-500 dark:text-gray-400 text-sm">Overhead</div>
-                    </div>
-                    <div class="px-4">
-                        <div class="text-3xl font-bold text-blue-500 dark:text-blue-400">6</div>
-                        <div class="text-gray-500 dark:text-gray-400 text-sm">Core Files</div>
-                    </div>
-                </div>
-            </div>
+        <p class="md:text-xl text-gray-600 dark:text-gray-400 max-w-4xl mx-auto mb-10">
+            A blazing fast, minimalist PHP framework built on a modern and flexible 
+            <strong class="text-gray-800 dark:text-white">RVC / MVC architecture</strong>. Start simple, scale when needed.
+        </p>
+        <div class="flex justify-center gap-4 flex-wrap">
+            <a href="{{route('docs')}}" class="px-7 py-3 rounded-full text-white bg-gradient-to-r from-red-500 to-purple-600 font-medium hover:scale-105 transition-transform shadow-lg">
+                Get Started
+            </a>
+            <a href="https://github.com/veltophp" target="_blank" class="px-7 py-3 rounded-full border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:text-red-600 dark:hover:text-red-400 transition-colors">
+                <i class="fab fa-github mr-2"></i> GitHub
+            </a>
+        </div>
+        <div class="text-2xl sm:text-2xl font-light my-12 border border-gray-300 dark:border-gray-600 max-w-xs p-4 rounded-full mx-auto">
+            Version <span class="font-semibold text-red-500 dark:text-red-400">1.1.x</span>
         </div>
     </section>
 
-    <!-- Features Grid Section -->
-    <section id="features" class="py-20 px-6 bg-gray-50 dark:bg-dark-900">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
-                <span class="inline-block px-4 py-2 bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 rounded-full text-sm font-medium mb-4">WHY VELTO?</span>
-                <h2 class="text-4xl font-bold dark:text-white mb-4">Modern Development Experience</h2>
-                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">Designed for developers who value simplicity without sacrificing power</p>
+    <!-- Features Section -->
+    <section class="py-24 border-t border-gray-200 dark:border-gray-700">
+        <h2 class="text-3xl font-light text-gray-900 dark:text-white mb-14">
+            Why <span class="text-red-600 dark:text-red-500 font-medium">VeltoPHP</span>?
+        </h2>
+        <div class="grid md:grid-cols-3 gap-12 text-center">
+            <div>
+                <div class="mb-5 text-red-500 dark:text-red-400">
+                    <i class="fas fa-rocket text-4xl"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-3">Ultra Lightweight</h3>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Velto's core is under 1MB. No bloat. Just speed and precision.</p>
             </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="bg-white dark:bg-dark-800 p-8 rounded-2xl border border-gray-100 dark:border-dark-700 shadow-sm hover:shadow-md transition-all hover:-translate-y-2">
-                    <div class="w-14 h-14 bg-red-100 dark:bg-red-900/20 rounded-xl flex items-center justify-center mb-6 text-red-500 dark:text-red-400 text-2xl">
-                        <i class="fas fa-tachometer-alt"></i>
-                    </div>
-                    <h3 class="text-xl font-bold dark:text-white mb-3">Blazing Fast</h3>
-                    <p class="text-gray-600 dark:text-gray-400">Optimized for performance with minimal overhead. No complex abstractions slowing you down.</p>
+            <div>
+                <div class="mb-5 text-purple-500 dark:text-purple-400">
+                    <i class="fas fa-cube text-4xl"></i>
                 </div>
-                
-                <!-- Feature 2 -->
-                <div class="bg-white dark:bg-dark-800 p-8 rounded-2xl border border-gray-100 dark:border-dark-700 shadow-sm hover:shadow-md transition-all hover:-translate-y-2">
-                    <div class="w-14 h-14 bg-purple-100 dark:bg-purple-900/20 rounded-xl flex items-center justify-center mb-6 text-purple-500 dark:text-purple-400 text-2xl">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3 class="text-xl font-bold dark:text-white mb-3">Simple RVC Pattern</h3>
-                    <p class="text-gray-600 dark:text-gray-400">Route → View → Controller. A streamlined approach that's easy to understand and extend.</p>
+                <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-3">Modern RVC First</h3>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Route-View-Controller structure that's faster to prototype and easier to maintain.</p>
+            </div>
+            <div>
+                <div class="mb-5 text-blue-500 dark:text-blue-400">
+                    <i class="fas fa-puzzle-piece text-4xl"></i>
                 </div>
-                
-                <!-- Feature 3 -->
-                <div class="bg-white dark:bg-dark-800 p-8 rounded-2xl border border-gray-100 dark:border-dark-700 shadow-sm hover:shadow-md transition-all hover:-translate-y-2">
-                    <div class="w-14 h-14 bg-blue-100 dark:bg-blue-900/20 rounded-xl flex items-center justify-center mb-6 text-blue-500 dark:text-blue-400 text-2xl">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h3 class="text-xl font-bold dark:text-white mb-3">Zero Configuration</h3>
-                    <p class="text-gray-600 dark:text-gray-400">Get started immediately with sensible defaults and no complex setup required.</p>
-                </div>
-                
-                <!-- Feature 4 -->
-                <div class="bg-white dark:bg-dark-800 p-8 rounded-2xl border border-gray-100 dark:border-dark-700 shadow-sm hover:shadow-md transition-all hover:-translate-y-2">
-                    <div class="w-14 h-14 bg-green-100 dark:bg-green-900/20 rounded-xl flex items-center justify-center mb-6 text-green-500 dark:text-green-400 text-2xl">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3 class="text-xl font-bold dark:text-white mb-3">Built for Modern Web</h3>
-                    <p class="text-gray-600 dark:text-gray-400">Perfect for SPAs, APIs, and static sites with clean, modern PHP practices.</p>
-                </div>
-                
-                <!-- Feature 5 -->
-                <div class="bg-white dark:bg-dark-800 p-8 rounded-2xl border border-gray-100 dark:border-dark-700 shadow-sm hover:shadow-md transition-all hover:-translate-y-2">
-                    <div class="w-14 h-14 bg-yellow-100 dark:bg-yellow-900/20 rounded-xl flex items-center justify-center mb-6 text-yellow-500 dark:text-yellow-400 text-2xl">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3 class="text-xl font-bold dark:text-white mb-3">Secure by Default</h3>
-                    <p class="text-gray-600 dark:text-gray-400">Built-in protections against common vulnerabilities with simple configuration.</p>
-                </div>
-                
-                <!-- Feature 6 -->
-                <div class="bg-white dark:bg-dark-800 p-8 rounded-2xl border border-gray-100 dark:border-dark-700 shadow-sm hover:shadow-md transition-all hover:-translate-y-2">
-                    <div class="w-14 h-14 bg-pink-100 dark:bg-pink-900/20 rounded-xl flex items-center justify-center mb-6 text-pink-500 dark:text-pink-400 text-2xl">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <h3 class="text-xl font-bold dark:text-white mb-3">Ready to Scale</h3>
-                    <p class="text-gray-600 dark:text-gray-400">Start small and grow when needed without framework limitations.</p>
-                </div>
+                <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-3">Power Up with Axion</h3>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Need MVC, migrations, auth, admin panel? Axion scales your stack instantly.</p>
             </div>
         </div>
     </section>
-
-    <!-- RVC Pattern Visual Explanation -->
-    <section id="rvc-pattern" class="py-20 px-6 bg-white dark:bg-dark-900">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-16">
-                <span class="inline-block px-4 py-2 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded-full text-sm font-medium mb-4">ARCHITECTURE</span>
-                <h2 class="text-4xl font-bold dark:text-white mb-4">The RVC Pattern Explained</h2>
-                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">A streamlined approach that keeps your code organized and efficient</p>
-            </div>
-            
-            <div class="relative">
-                <!-- Connection lines (desktop only) -->
-                <div class="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 -translate-y-1/2 z-0"></div>
-                <div class="hidden lg:block absolute top-1/2 left-1/3 w-2 h-16 bg-purple-500 -translate-y-1/2 -translate-x-1/2 z-0"></div>
-                <div class="hidden lg:block absolute top-1/2 right-1/3 w-2 h-16 bg-purple-500 -translate-y-1/2 translate-x-1/2 z-0"></div>
-                
-                <div class="relative grid lg:grid-cols-3 gap-8 z-10">
-                    <!-- Route -->
-                    <div class="bg-white dark:bg-dark-800 p-8 rounded-2xl border border-gray-100 dark:border-dark-700 shadow-lg text-center">
-                        <div class="w-20 h-20 bg-red-100 dark:bg-red-900/20 rounded-2xl flex items-center justify-center mx-auto mb-6 text-red-500 dark:text-red-400 text-3xl">
-                            <i class="fas fa-route"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold dark:text-white mb-3">Route</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">
-                            Simple URL routing that maps directly to your controllers
-                        </p>
-                        <div class="bg-gray-50 dark:bg-dark-700 rounded-lg p-4 text-left font-mono text-sm">
-                            <span class="text-red-400">Route::get</span>('<span class="text-blue-400">/about</span>', '<span class="text-purple-400">AboutController</span>@about');
-                        </div>
-                    </div>
-                    
-                    <!-- Controller -->
-                    <div class="bg-white dark:bg-dark-800 p-8 rounded-2xl border border-gray-100 dark:border-dark-700 shadow-lg text-center lg:transform lg:-translate-y-8">
-                        <div class="w-20 h-20 bg-purple-100 dark:bg-purple-900/20 rounded-2xl flex items-center justify-center mx-auto mb-6 text-purple-500 dark:text-purple-400 text-3xl">
-                            <i class="fas fa-cogs"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold dark:text-white mb-3">Controller</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">
-                            Clean PHP classes that handle your application logic
-                        </p>
-                        <div class="bg-gray-50 dark:bg-dark-700 rounded-lg p-4 text-left font-mono text-sm">
-                            <span class="text-blue-400">class</span> AboutController {<br>
-                            &nbsp;&nbsp;<span class="text-blue-400">public function</span> about() {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-purple-400">return</span> view(<span class="text-green-400">'about'</span>);<br>
-                            &nbsp;&nbsp;}<br>
-                            }
-                        </div>
-                    </div>
-                    
-                    <!-- View -->
-                    <div class="bg-white dark:bg-dark-800 p-8 rounded-2xl border border-gray-100 dark:border-dark-700 shadow-lg text-center">
-                        <div class="w-20 h-20 bg-blue-100 dark:bg-blue-900/20 rounded-2xl flex items-center justify-center mx-auto mb-6 text-blue-500 dark:text-blue-400 text-3xl">
-                            <i class="fas fa-file-code"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold dark:text-white mb-3">View</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">
-                            Lightweight templating using .vel.php extensions, powered by Velto.
-                        </p>
-                        <div class="bg-gray-50 dark:bg-dark-700 rounded-lg p-4 text-left font-mono text-sm">
-                            &lt;<span class="text-red-400">h1</span>&gt;About Us&lt;/<span class="text-red-400">h1</span>&gt;<br>
-                            &lt;<span class="text-red-400">p</span>&gt; Some text about &lt;/<span class="text-red-400">p</span>&gt;
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Combined Section with Header -->
-    <section class="py-12 px-6 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-dark-800 dark:to-dark-950">
-        <div class="max-w-7xl mx-auto">
-            <!-- Compact Header -->
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-3">
-                    VeltoPHP Static Website Ideas
-                </h2>
-                <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                Velto shines in these scenarios where simplicity matters.
-                </p>
-            </div>
-
-            <!-- Use Cases Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Idea Cards with Dark Mode -->
-                <div class="bg-white dark:bg-dark-700 rounded-lg shadow-md p-6 border border-gray-100 dark:border-dark-600 hover:shadow-lg transition-shadow">
-                    <div class="text-2xl mb-3">💡</div>
-                    <h3 class="text-xl font-bold mb-2 dark:text-white">Personal Portfolio</h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-3">Display profile, skills, project showcase, and contact info.</p>
-                </div>
-
-                <div class="bg-white dark:bg-dark-700 rounded-lg shadow-md p-6 border border-gray-100 dark:border-dark-600 hover:shadow-lg transition-shadow">
-                    <div class="text-2xl mb-3">🧑‍🏫</div>
-                    <h3 class="text-xl font-bold mb-2 dark:text-white">Online CV / Resume</h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-3">Digital resume with PDF download option.</p>
-                </div>
-
-                <div class="bg-white dark:bg-dark-700 rounded-lg shadow-md p-6 border border-gray-100 dark:border-dark-600 hover:shadow-lg transition-shadow">
-                    <div class="text-2xl mb-3">🚀</div>
-                    <h3 class="text-xl font-bold mb-2 dark:text-white">Product Landing Page</h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-3">Product info, features, pricing, and CTA buttons.</p>
-                </div>
-
-                <div class="bg-white dark:bg-dark-700 rounded-lg shadow-md p-6 border border-gray-100 dark:border-dark-600 hover:shadow-lg transition-shadow">
-                    <div class="text-2xl mb-3">🏫</div>
-                    <h3 class="text-xl font-bold mb-2 dark:text-white">Event Page</h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-3">Event details with countdown timer and RSVP form.</p>
-                </div>
-
-                <div class="bg-white dark:bg-dark-700 rounded-lg shadow-md p-6 border border-gray-100 dark:border-dark-600 hover:shadow-lg transition-shadow">
-                    <div class="text-2xl mb-3">📦</div>
-                    <h3 class="text-xl font-bold mb-2 dark:text-white">SaaS Promo Page</h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-3">Showcase features with pricing and testimonials.</p>
-                </div>
-
-                <div class="bg-white dark:bg-dark-700 rounded-lg shadow-md p-6 border border-gray-100 dark:border-dark-600 hover:shadow-lg transition-shadow">
-                    <div class="text-2xl mb-3">🧾</div>
-                    <h3 class="text-xl font-bold mb-2 dark:text-white">Documentation</h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-3">Markdown-to-HTML docs for libraries/frameworks.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Code Example Section -->
-    <section id="get-started" class="py-20 px-6 bg-white dark:bg-dark-950">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-16">
-                <span class="inline-block px-4 py-2 bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-400 rounded-full text-sm font-medium mb-4">GET STARTED</span>
-                <h2 class="text-4xl font-bold dark:text-gray-800 mb-4">Install in Seconds</h2>
-                <p class="text-xl text-gray-600 dark:text-gray-600 max-w-3xl mx-auto">Get up and running with just a few commands</p>
-            </div>
-            
-            <div class="bg-gray-800 dark:bg-dark-800 rounded-xl shadow-xl overflow-hidden">
-                <div class="flex items-center px-6 py-3 bg-gray-900 dark:bg-dark-900 border-b border-gray-700 dark:border-dark-700">
-                    <div class="flex space-x-2 mr-4">
-                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                    </div>
-                    <div class="text-gray-400 text-sm font-mono">terminal</div>
-                </div>
-                <div class="p-6">
-                    <pre class="text-gray-200 overflow-x-auto font-mono text-sm">
-                        <code class="language-bash">
-# Install via Composer
-<span class="text-green-400">composer</span> create-project veltophp/velto my-project
-
-# Navigate to project
-<span class="text-green-400">cd</span> my-project
-
-# Run update
-<span class="text-green-400">composer</span> update
-
-# Start development server
-<span class="text-green-400">php</span> velto start
-                        </code>
-                    </pre>
-                </div>
-            </div>
-            
-            <div class="mt-12 grid md:grid-cols-2 gap-8">
-                <div class="bg-gray-50 dark:bg-dark-800 p-8 rounded-xl border border-gray-200 dark:border-dark-700">
-                    <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/20 rounded-lg flex items-center justify-center mb-4 text-blue-500 dark:text-blue-400 text-xl">
-                        <i class="fas fa-book"></i>
-                    </div>
-                    <h3 class="text-xl font-bold dark:text-white mb-3">Documentation</h3>
-                    <p class="text-gray-600 dark:text-gray-400 mb-4">
-                        Explore our comprehensive guides and API references
-                    </p>
-                    <a href="/docs/home" class="inline-flex items-center text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium">
-                        Read Docs <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-                
-                <div class="bg-gray-50 dark:bg-dark-800 p-8 rounded-xl border border-gray-200 dark:border-dark-700">
-                    <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/20 rounded-lg flex items-center justify-center mb-4 text-purple-500 dark:text-purple-400 text-xl">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3 class="text-xl font-bold dark:text-white mb-3">Examples</h3>
-                    <p class="text-gray-600 dark:text-gray-400 mb-4">
-                        Learn from practical examples and starter templates
-                    </p>
-                    <a href="#" class="inline-flex items-center text-purple-600 hover:text-purple-800 dark:text-purple-400 dark:hover:text-purple-300 font-medium">
-                        View Examples <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="py-20 px-6 bg-gradient-to-r from-red-600 via-purple-600 to-blue-600 text-white">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-6">Ready to Build Something Amazing?</h2>
-            <p class="text-xl opacity-90 mb-8">
-                Join developers who value simplicity and performance in their PHP projects
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="https://github.com/veltophp/velto" target="_blank" class="px-8 py-4 bg-black/20 border border-white/20 font-medium rounded-lg hover:bg-black/30 transition transform hover:-translate-y-1 flex items-center justify-center">
-                    <i class="fab fa-github mr-3"></i> GitHub Repository
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section class="relative overflow-hidden py-[150px] md:py-[300px]">
-        <!-- Background watermark -->
-        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <span class="text-[200px] md:text-[700px] font-bold opacity-5 dark:opacity-[0.1] text-gray-700 dark:text-gray-500 select-none">.vel</span>
-        </div>
-    </section>
+</div>
+<div class="relative bg-gray-50 dark:bg-gray-900 m-4 p-5 rounded-xl my-12 text-center max-w-3xl mx-auto italic">
+    <svg class="absolute top-4 left-4 w-10 h-10 text-gray-300 dark:text-gray-600 transform -rotate-12" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M9 11H7a5 5 0 0 1 5-5V4a7 7 0 0 0-7 7v4h4v-4zm10 0h-2a5 5 0 0 1 5-5V4a7 7 0 0 0-7 7v4h4v-4z"/>
+    </svg>
+    <p class="mx-5 text-gray-700 dark:text-gray-300 leading-relaxed">
+        “Don’t bring a truck when all you need is a bag. Use the tool that fits your purpose.” - <span class="font-semibold">VeltoPHP</span>
+    </p>
 </div>
 @endsection

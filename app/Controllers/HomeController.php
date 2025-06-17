@@ -1,50 +1,51 @@
 <?php
 
+/**
+ * Class HomeController in namespace App\Controllers.
+ *
+ * Structure:
+ * - Extends the base `Controller` class from the `Velto\Core` namespace.
+ * - Defines two public methods: `index()` and `example()`.
+ *
+ * How it works:
+ * - `index()`:
+ * - Sets the value of the `$title` variable to 'Velto'.
+ * - Calls the `view()` function (presumably a helper function provided by the framework) to render the 'home' view and passes the `$title` variable to the view.
+ * - Returns the result of the `view()` function, which is likely the rendered HTML content of the view.
+ *
+ * - `example()`:
+ * - Sets the value of the `$title` variable to 'Example Page'.
+ * - Calls the `view()` function to render the 'pages.example-page' view and passes the `$title` variable to the view.
+ * - Returns the rendered HTML content of the view.
+ *
+ * In essence, this controller handles requests for the home page and an example page, setting a title and rendering the appropriate view for each.
+ */
+
 namespace App\Controllers;
 
 use Velto\Core\Controller;
-use Velto\Core\Mail;
 
 
 class HomeController extends Controller {
     public function index() {
 
         $title = 'Velto';
-        $latestVersion = $this->getLatestVeltoVersion();
-
 
         return view('home', [
             
-            'title' => $title,
-            'latestVersion' => $latestVersion,
+            'title' => $title
         
         ]);
 
     }
 
-    private function getLatestVeltoVersion()
-    {
-        $url = 'https://api.github.com/repos/veltophp/velto/tags';
 
-        $token = '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';
-        $options = [
-            "http" => [
-                "header" => "User-Agent: VeltoClient\r\nAuthorization: token $token\r\n"
-            ]
-        ];
-        $context = stream_context_create($options);
-        $response = file_get_contents($url, false, $context);
-        $tags = json_decode($response, true);
+    public function example() {
 
-        return $tags[0]['name'] ?? 'Unknown';
+        $title = 'Example Page';
+
+        return view ('pages.example-page',['title' => $title]);
+
     }
 
-
-    public function test() {
-
-        return view('pages.test');
-    }
-
-
-    
 }

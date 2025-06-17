@@ -103,5 +103,4 @@ Velto, with its RVC (Route - View - Controller) architecture, is great for light
 Developed by [veltophp](https://veltophp.com)  
 Follow us on Instagram: [@veltophp](https://instagram.com/veltophp)  
 Developer contact: `dev@veltophp.com`  
-Source code: [github.com/veltophp](https://github.com/veltophp)# velto-site
-# velto-site
+Source code: [github.com/veltophp](https://github.com/veltophp)

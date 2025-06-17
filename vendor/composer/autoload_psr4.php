@@ -6,6 +6,18 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Veltophp\\VeltoCli\\' => array($vendorDir . '/veltophp/velto-cli/src', $vendorDir . '/veltophp/velto-cli/src'),
+    'Veltophp\\Axion\\' => array($vendorDir . '/veltophp/axion/axion/src'),
     'Velto\\Core\\' => array($vendorDir . '/veltophp/velto-core/core'),
+    'Velto\\Axion\\Models\\' => array($baseDir . '/axion/models'),
+    'Velto\\Axion\\Middleware\\' => array($baseDir . '/axion/middleware'),
+    'Velto\\Axion\\Controllers\\' => array($baseDir . '/axion/controllers'),
+    'Velto\\Axion\\App\\' => array($baseDir . '/axion/app'),
+    'Velto\\Axion\\' => array($vendorDir . '/veltophp/axion/src'),
+    'Symfony\\Polyfill\\Php80\\' => array($vendorDir . '/symfony/polyfill-php80'),
+    'Psr\\EventDispatcher\\' => array($vendorDir . '/psr/event-dispatcher/src'),
+    'League\\Config\\' => array($vendorDir . '/league/config/src'),
+    'League\\CommonMark\\' => array($vendorDir . '/league/commonmark/src'),
+    'Dflydev\\DotAccessData\\' => array($vendorDir . '/dflydev/dot-access-data/src'),
     'App\\' => array($baseDir . '/app'),
 );

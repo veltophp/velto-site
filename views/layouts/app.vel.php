@@ -1,19 +1,53 @@
+
 <!DOCTYPE html>
 <html lang="en">
+    <!--
+    VeltoPHP Framework
+    -----------------
+    VeltoPHP is a lightweight, fast, and minimalist PHP framework designed
+    for building modern static and dynamic web projects with simplicity
+    and efficiency in mind.
+
+    Official Website: https://veltophp.com
+    License: MIT License - You are free to use, modify, and distribute
+    the software under the terms of the MIT license.
+
+    Maintained by: veltophp Team
+    Contact Email: dev@veltophp.com
+    Instagram: https://instagram.com/veltophp
+
+    Thank you for using VeltoPHP! For documentation, tutorials, and
+    community support, please visit our website.
+    -->
 <head>
+    <!-- Existing Meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'VeltoPHP Framework | Fast & Minimalist RVC-Powered Web Development.')</title>
-    <link rel="icon" href="https://res.cloudinary.com/dmnble1qr/image/upload/v1744859332/velto_zfond5.png" type="image/png">
+    <title>@yield('title', 'VeltoPHP Framework | Fast & Minimalist RVC Powered Web Development.')</title>
+    <link rel="icon" href="https://res.cloudinary.com/drbowe2hn/image/upload/v1749287950/FAVICON_cfszfv.png" type="image/png">
     <meta name="description" content="Velto is a lightweight PHP framework built with the RVC (Route-View-Controller) pattern. Ideal for building fast, static, and simple web applications — no database required.">
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-    @css_link
+
+    <!-- SEO Enhancements -->
+    <meta name="keywords" content="VeltoPHP, PHP framework, lightweight PHP, minimalist PHP, RVC, MVC, Route View Controller, fast web development, Velto, Axion, web framework">
+    <meta name="author" content="VeltoPHP Team">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="en">
+    <meta name="theme-color" content="#ef4444">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="VeltoPHP Framework | Lightweight RVC for Fast Web Development">
+    <meta property="og:description" content="Velto is a lightweight PHP framework built with the RVC (Route-View-Controller) pattern. Ideal for building fast, static, and simple web applications — no database required.">
+    <meta property="og:image" content="https://res.cloudinary.com/drbowe2hn/image/upload/v1749287950/FAVICON_cfszfv.png">
+    <meta property="og:url" content="https://veltophp.com">
+
+    <!-- Assets & Scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="/assets/js/dark-thema.js" defer></script>
-    <!-- watch auto reload -->
     <script src="/assets/js/watch.js"></script>
-    <!-- aditional script   -->
     <script src="/assets/js/script.js" defer></script>
+
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -47,7 +81,7 @@
         }
     </script>
 </head>
-<body class="bg-gradient-to-br from-gray-50 to-white text-gray-800 font-sans antialiased dark:bg-gradient-to-br dark:from-dark-900 dark:to-dark-800 dark:text-gray-200 transition-colors duration-300">
+<body class="bg-white text-gray-800 font-sans antialiased dark:bg-dark-800 dark:text-gray-200">
     @include('components.dark-button')
     <!-- Header/Navigation -->
     @include('components.navbar')
@@ -56,14 +90,5 @@
     <!-- Footer -->
     @include('components.footer')
     @include('components.session-notif')
-    <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
-        <script>
-            kofiWidgetOverlay.draw('veltophp', {
-            'type': 'floating-chat',
-            'floating-chat.donateButton.text': 'Support Us',
-            'floating-chat.donateButton.background-color': '#d9534f',
-            'floating-chat.donateButton.text-color': '#fff'
-            });
-        </script>
 </body>
 </html>

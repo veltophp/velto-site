@@ -31,16 +31,26 @@ class Env
 
     public static function get(string $key, $default = null)
     {
-        return $_ENV[$key] ?? getenv($key) ?? $default;
+        $value = $_ENV[$key] ?? getenv($key) ?? $default;
+
+        if (is_string($value)) {
+            $value = strtolower(trim($value));
+
+            return match($value) {
+                'true' => true,
+                'false' => false,
+                default => $value,
+            };
+        }
+
+        return $value;
     }
 
-    public static function isDebug(): bool
-    // Check the debug status || True or False 
-    {
-        $debug = strtolower(static::get('APP_DEBUG', 'false'));
-        // dd("APP_DEBUG:", $debug, $debug === 'true');
 
-        return $debug === 'true';
+
+    public static function isDebug(): bool
+    {
+        return static::get('APP_DEBUG', false, true) === true;
     }
 
 }

@@ -1,6 +1,7 @@
 # System files
 .DS_Store
 Thumbs.db
+.Trashes
 
 # Environment
 .env
@@ -8,15 +9,27 @@ Thumbs.db
 # Logs & cache
 storage/logs/
 storage/cache/
+storage/sessions/
 *.log
+
+# Ignore SQLite database
+database.sqlite
+
+# Vendor (composer)
+vendor/
+composer.phar
+
+# Preserve empty dirs
+!storage/.gitignore
+!storage/logs/.gitignore
+!storage/cache/.gitignore
+!storage/sessions/.gitignore
 
 # IDE/editor settings
 .idea/
 .vscode/
 *.sublime-workspace
 *.sublime-project
-
-# composer.lock
-
-# MacOS and Linux trash
-.Trashes
+ 
+# Database
+axion/database/*.sqlite
