@@ -15,7 +15,7 @@
             <a href="{{ route('docs') }}" class="text-gray-700 hover:text-red-600 dark:text-gray-300 dark:hover:text-red-500 transition-colors @active('/docs', 'font-semibold')">Docs</a>
             <a href="{{ route('contact') }}" class="text-gray-700 hover:text-red-600 dark:text-gray-300 dark:hover:text-red-500 transition-colors @active('/contact', 'font-semibold')">Contact</a>
 
-            @if(Auth::user())
+            {{-- @if(Auth::user())
                 <a href="{{ route('dashboard') }}" class="ml-4 px-4 py-2 border border-gray-300 text-red-600 rounded-lg hover:bg-gray-100 dark:border-gray-500 dark:text-red-500 dark:hover:bg-gray-700 transition-colors duration-200">
                     Dashboard
                 </a>
@@ -23,7 +23,7 @@
                 <a href="{{ route('login') }}" class="ml-4 px-4 py-2 border border-gray-300 text-red-600 rounded-lg hover:bg-gray-100 dark:border-gray-500 dark:text-red-500 dark:hover:bg-gray-700 transition-colors duration-200">
                     Login
                 </a>
-            @endif
+            @endif --}}
         </nav>
 
         <button id="mobile-menu-toggle" class="md:hidden text-gray-700 dark:text-gray-300 focus:outline-none">
@@ -38,7 +38,7 @@
             <a href="{{ route('docs') }}" class="py-3 text-base font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition">Docs</a>
             <a href="{{ route('contact') }}" class="py-3 text-base font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition">Contact</a>
     
-            @if(Auth::user())
+            {{-- @if(Auth::user())
                 <div class="pt-4">
                     <a href="{{ route('dashboard') }}" class="w-full inline-flex items-center justify-center px-4 py-3 rounded-md bg-red-600 text-white font-semibold shadow hover:bg-red-700 dark:bg-red-500 dark:hover:bg-red-600 transition">
                         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -56,7 +56,7 @@
                         Login
                     </a>
                 </div>
-            @endif
+            @endif --}}
         </nav>
     </div>    
 
