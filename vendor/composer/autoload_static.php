@@ -107,6 +107,7 @@ class ComposerStaticInit02b22b77a570b8761d50dde8881795c9
         ),
     );
 
+<<<<<<< HEAD
     public static $classMap = array (
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
@@ -178,12 +179,13 @@ class ComposerStaticInit02b22b77a570b8761d50dde8881795c9
         'ValueError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
     );
 
+=======
+>>>>>>> d358e41 (update)
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit02b22b77a570b8761d50dde8881795c9::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit02b22b77a570b8761d50dde8881795c9::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit02b22b77a570b8761d50dde8881795c9::$classMap;
 
         }, null, ClassLoader::class);
     }
