@@ -32,4 +32,4 @@ composer.phar
 *.sublime-project
  
 # Database
-axion/database/*.sqlite
+axion/database/*.sqlitevendor/
