@@ -617,16 +617,16 @@
         },
         {
             "name": "veltophp/axion",
-            "version": "v1.1.5",
+            "version": "v1.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/veltophp/axion.git",
-                "reference": "745661d29489f04ac86863bba8e2000b114285f7"
+                "reference": "53bf3ea98a6ef738cd0d39483b87ebcf4dc36f92"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/veltophp/axion/zipball/745661d29489f04ac86863bba8e2000b114285f7",
-                "reference": "745661d29489f04ac86863bba8e2000b114285f7",
+                "url": "https://api.github.com/repos/veltophp/axion/zipball/53bf3ea98a6ef738cd0d39483b87ebcf4dc36f92",
+                "reference": "53bf3ea98a6ef738cd0d39483b87ebcf4dc36f92",
                 "shasum": ""
             },
             "require": {
@@ -656,22 +656,22 @@
             "description": "Axion - Modular MVC Admin Panel for VeltoPHP",
             "support": {
                 "issues": "https://github.com/veltophp/axion/issues",
-                "source": "https://github.com/veltophp/axion/tree/v1.1.5"
+                "source": "https://github.com/veltophp/axion/tree/v1.1.7"
             },
-            "time": "2025-06-12T10:18:40+00:00"
+            "time": "2025-06-17T03:04:56+00:00"
         },
         {
             "name": "veltophp/velto-cli",
-            "version": "v1.1.2",
+            "version": "v1.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/veltophp/velto-cli.git",
-                "reference": "4cfdaa4c3df6b79d4eccb8064f494c7f6b8064fd"
+                "reference": "15d3f67b743c5f033c8d1666b2c7f9a72b95cc8d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/veltophp/velto-cli/zipball/4cfdaa4c3df6b79d4eccb8064f494c7f6b8064fd",
-                "reference": "4cfdaa4c3df6b79d4eccb8064f494c7f6b8064fd",
+                "url": "https://api.github.com/repos/veltophp/velto-cli/zipball/15d3f67b743c5f033c8d1666b2c7f9a72b95cc8d",
+                "reference": "15d3f67b743c5f033c8d1666b2c7f9a72b95cc8d",
                 "shasum": ""
             },
             "require": {
@@ -704,9 +704,9 @@
             "description": "VeltoPHP CLI for managing Velto projects",
             "support": {
                 "issues": "https://github.com/veltophp/velto-cli/issues",
-                "source": "https://github.com/veltophp/velto-cli/tree/v1.1.2"
+                "source": "https://github.com/veltophp/velto-cli/tree/v1.1.3"
             },
-            "time": "2025-06-12T07:27:39+00:00"
+            "time": "2025-06-17T03:06:30+00:00"
         },
         {
             "name": "veltophp/velto-core",
