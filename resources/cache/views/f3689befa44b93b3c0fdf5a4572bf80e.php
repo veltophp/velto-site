@@ -15,14 +15,12 @@
                 </div> 
 
                 <h1 class="text-5xl md:text-6xl font-thin text-gray-900 mb-4">
-                    Welcome to 
+                    Documentation |
                     <span class="relative text-red-500 ml-2 inline-block">
                         VeltoPHP
                         <span class="absolute -top-2 -right-4 text-sm text-red-500 font-light">V2</span>
                     </span>
                 </h1>                
-                <p class="text-gray-600 font-light max-w-4xl mx-auto mb-4">Documentation</p>  
-
                 
                 <div class="mt-8 text-sm text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
                     <p class="italic">
