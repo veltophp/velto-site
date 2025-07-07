@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'veltophp/velto',
-        'pretty_version' => 'v2.0.7',
-        'version' => '2.0.7.0',
-        'reference' => null,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '88cea9ef291c173f171b76e5bca0d26c2432a1e7',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -47,9 +47,9 @@
             'dev_requirement' => false,
         ),
         'veltophp/velto' => array(
-            'pretty_version' => 'v2.0.7',
-            'version' => '2.0.7.0',
-            'reference' => null,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '88cea9ef291c173f171b76e5bca0d26c2432a1e7',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
