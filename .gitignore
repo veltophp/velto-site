@@ -4,32 +4,37 @@ Thumbs.db
 .Trashes
 
 # Environment
-.env
+# .env
 
 # Logs & cache
-storage/logs/
-storage/cache/
+storage/log/
 storage/sessions/
+resources/cache/views/
 *.log
 
-# Ignore SQLite database
+# SQLite 
 database.sqlite
 
-# Vendor (composer)
-vendor/
-composer.phar
+# Composer vendor
+/vendor/
+/composer.phar
 
-# Preserve empty dirs
-!storage/.gitignore
-!storage/logs/.gitignore
-!storage/cache/.gitignore
-!storage/sessions/.gitignore
+# Preserve empty dirs 
+!storage/
+!storage/log/
+!storage/sessions/
+!resources/cache/views/
 
 # IDE/editor settings
 .idea/
 .vscode/
 *.sublime-workspace
 *.sublime-project
+<<<<<<< HEAD
  
 # Database
 axion/database/*.sqlitevendor/
+=======
+
+composer.lock
+>>>>>>> c054d74 (update velto v2)
