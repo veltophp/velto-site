@@ -3,7 +3,7 @@
         'name' => 'veltophp/velto',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '860e1cf733997886341fad39847802dd4e415e79',
+        'reference' => 'd448c3bf90a40ac9401c817dc3c92804fb80c059',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -49,7 +49,7 @@
         'veltophp/velto' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '860e1cf733997886341fad39847802dd4e415e79',
+            'reference' => 'd448c3bf90a40ac9401c817dc3c92804fb80c059',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
