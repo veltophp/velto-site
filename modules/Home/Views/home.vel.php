@@ -22,12 +22,38 @@
                 </h1>                
                 <p class="text-gray-600 font-light mb-12 max-w-4xl mx-auto">
                     {{$message}}
-                </p>                                
+                </p>  
+                <div>
+                    <a href="https://github.com/veltophp/velto" target="_blank" rel="noopener" class="inline-flex items-center px-4 py-3 bg-red-500 text-white text-sm font-semibold rounded-lg hover:bg-gray-800 transition">
+                        <svg class="w-5 h-5 mr-2 fill-current" viewBox="0 0 24 24">
+                            <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.92.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.87-1.54-3.87-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.07-.73.08-.72.08-.72 1.19.08 1.81 1.22 1.81 1.22 1.05 1.8 2.75 1.28 3.42.98.11-.76.41-1.28.74-1.57-2.55-.29-5.23-1.28-5.23-5.71 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.18a10.94 10.94 0 012.87-.39c.97 0 1.95.13 2.87.39 2.18-1.49 3.14-1.18 3.14-1.18.63 1.57.24 2.73.12 3.02.74.81 1.18 1.84 1.18 3.1 0 4.44-2.69 5.41-5.25 5.69.42.36.79 1.09.79 2.2 0 1.59-.01 2.87-.01 3.26 0 .31.21.68.8.56A10.51 10.51 0 0023.5 12C23.5 5.73 18.27.5 12 .5z"/>
+                        </svg>
+                        Visit GitHub
+                    </a>                    
+                </div>                              
             </div>
         </div>
     </div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-gray-100 max-w-2xl mx-auto p-6 space-y-4">
+        <h2 class="text-xl font-bold text-gray-600">Getting Started with VeltoPHP</h2>
+      
+        <div class="space-y-2 font-mono text-sm bg-gray-800 p-4 rounded-lg border border-gray-700">
+          <p><span class="text-green-400"># 1. Create a new project using Composer</span><br>
+          composer create-project veltophp/velto my-project</p>
+      
+          <p><span class="text-green-400"># 2. Move into the project directory</span><br>
+          cd my-project</p>
+      
+          <p><span class="text-green-400"># 3. Start the development server</span><br>
+          php velto start</p>
+      
+          <p><span class="text-green-400"># 4. Open your browser and visit:</span><br>
+          http://localhost:8000</p>
+        </div>
+    </div>      
+
+    <div class="max-w-7xl mt-12 mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
             <h2 class="text-3xl font-thin text-gray-900 mb-4">Built for Modern Development</h2>
             <p class="text-gray-600 font-light">Everything you need to build amazing applications</p>
