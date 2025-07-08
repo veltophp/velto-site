@@ -40,7 +40,7 @@ class View
         self::reset();
     
         // extract($data, EXTR_SKIP);
-        $rawData = $data; 
+        $rawData = $data;
 
         foreach ($rawData as $key => $value) {
             $$key = $value;
@@ -99,7 +99,7 @@ class View
             $module = 'Home';
             $relativePath = $segments[0];
         } else {
-            $module = array_shift($segments);
+            $module = ucfirst(array_shift($segments));
             $relativePath = implode('/', $segments);
         }
 
