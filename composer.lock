@@ -348,16 +348,16 @@
         },
         {
             "name": "veltophp/velto-core",
-            "version": "v2.0.3",
+            "version": "v2.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/veltophp/velto-core.git",
-                "reference": "45d6087759eb44b5d223ce6a27cea3e02e22e8ea"
+                "reference": "913d2f8ada6e2a203a7d1e1f1381348076d4435b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/veltophp/velto-core/zipball/45d6087759eb44b5d223ce6a27cea3e02e22e8ea",
-                "reference": "45d6087759eb44b5d223ce6a27cea3e02e22e8ea",
+                "url": "https://api.github.com/repos/veltophp/velto-core/zipball/913d2f8ada6e2a203a7d1e1f1381348076d4435b",
+                "reference": "913d2f8ada6e2a203a7d1e1f1381348076d4435b",
                 "shasum": ""
             },
             "require": {
@@ -376,9 +376,9 @@
             "description": "The core of VeltoPHP Framework",
             "support": {
                 "issues": "https://github.com/veltophp/velto-core/issues",
-                "source": "https://github.com/veltophp/velto-core/tree/v2.0.3"
+                "source": "https://github.com/veltophp/velto-core/tree/v2.0.4"
             },
-            "time": "2025-07-08T08:10:08+00:00"
+            "time": "2025-07-08T09:23:31+00:00"
         }
     ],
     "packages-dev": [],
