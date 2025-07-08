@@ -11,18 +11,18 @@ class HomeController extends Controller
         $message = "VeltoPHP is a lightweight and straightforward PHP framework designed for building reliable web applications. 
                     Whether you're creating a simple website or a modular application, VeltoPHP V2 supports full-stack development with a clean and familiar HMVC structure.";
 
-        return view('home.home')->compact($message);
+        return view('Home.home')->compact($message);
 
     }
 
     public function documentation()
     {
-        return view('home.documentation');
+        return view('Home.documentation');
     }
 
 
     public function community()
     {
-        return view('home.community');
+        return view('Home.community');
     }
 }

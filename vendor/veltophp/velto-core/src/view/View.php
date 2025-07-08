@@ -96,7 +96,7 @@ class View
 
         $segments = explode('/', $viewPath);
         if (count($segments) < 2) {
-            $module = 'home';
+            $module = 'Home';
             $relativePath = $segments[0];
         } else {
             $module = array_shift($segments);
