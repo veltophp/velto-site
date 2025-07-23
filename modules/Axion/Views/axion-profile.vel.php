@@ -47,6 +47,12 @@
 
                 {{-- Email (non-editable) --}}
                 <div>
+                    <label class="block text-sm text-gray-700">Username</label>
+                    <input type="email" value="{{ Auth::user()->username }}" disabled
+                        class="mt-1 block w-full bg-gray-100 border border-gray-300 rounded-md shadow-sm px-3 py-2 font-thin text-gray-500 cursor-not-allowed">
+                </div>
+
+                <div>
                     <label class="block text-sm text-gray-700">Email Address</label>
                     <input type="email" value="{{ Auth::user()->email }}" disabled
                         class="mt-1 block w-full bg-gray-100 border border-gray-300 rounded-md shadow-sm px-3 py-2 font-thin text-gray-500 cursor-not-allowed">

@@ -16,8 +16,10 @@ class Route
     protected static array $currentGroupMiddleware = [];
     protected static ?array $currentRoute = null;
     protected static array $controllerNamespaces = [
-        'Modules\\',
+        'Modules\\', 
+        'Modules\\%s\\Controllers\\', 
     ];
+    
 
     protected static function normalizePath(string $path): string
     {
@@ -147,8 +149,16 @@ class Route
             [$ctrl, $method] = explode('::', $controller);
             $resolved = false;
 
-            foreach (self::$controllerNamespaces ?? [] as $ns) {
-                $class = $ns . $ctrl;
+            foreach (self::$controllerNamespaces as $ns) {
+                if (str_contains($ns, '%s')) {
+                    $parts = explode('\\', $ctrl);
+                    $module = $parts[0];
+                    $ctrlName = implode('\\', array_slice($parts, 1));
+                    $class = sprintf($ns, $module) . $ctrlName;
+                } else {
+                    $class = $ns . $ctrl;
+                }
+            
                 if (class_exists($class)) {
                     if (!method_exists($class, $method)) {
                         abort(404, "Method [$method] not found in controller [$class].");

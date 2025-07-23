@@ -9,9 +9,10 @@ class CreateUsersTable extends Migration
         $this->createTable('users', function ($table) {
             $table->id();
             $table->string('name');
+            $table->string('username');
             $table->string('email')->unique();
             $table->string('password');
-            $table->string('role')->default('user');
+            $table->enum('role', ['user', 'writer', 'moderator', 'admin'])->default('user');
             $table->boolean('email_verified')->default(false);
             $table->timestamps();
         });

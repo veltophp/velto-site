@@ -14,15 +14,15 @@
 
             <!-- Desktop Nav -->
             <div class="hidden md:flex items-center space-x-8">
-                <a href="<?php echo htmlspecialchars((string)(route('documentation')), ENT_QUOTES, 'UTF-8'); ?>" class="text-gray-600 hover:text-red-500 transition-colors font-light">Documentation</a>
-                <a href="<?php echo htmlspecialchars((string)(route('community')), ENT_QUOTES, 'UTF-8'); ?>" class="text-gray-600 hover:text-red-500 transition-colors font-light">Community</a>
+                <a href="<?php echo htmlspecialchars((string)(route('docs')), ENT_QUOTES, 'UTF-8'); ?>" class="<?php echo active('/docs', 'border-red-500'); ?> border-b-2 text-gray-600 hover:text-red-500 transition-colors font-light">Docs</a>
+                <a href="<?php echo htmlspecialchars((string)(route('community')), ENT_QUOTES, 'UTF-8'); ?>" class="<?php echo active('/community', 'border-red-500'); ?> border-b-2 text-gray-600 hover:text-red-500 transition-colors font-light">Community</a>
                 <?php if (env('AUTH_LOGIN')): ?>
                     <?php if (Auth::user()): ?>
                         <a href="<?php echo htmlspecialchars((string)(route('axion.dashboard')), ENT_QUOTES, 'UTF-8'); ?>" class="text-gray-600 hover:text-red-500 transition-colors font-light">
                             Dashboard
                         </a>
                     <?php else: ?>
-                        <a href="<?php echo htmlspecialchars((string)(route('axion.dashboard')), ENT_QUOTES, 'UTF-8'); ?>" class="text-gray-600 hover:text-red-500 transition-colors font-light">
+                        <a href="<?php echo htmlspecialchars((string)(route('login')), ENT_QUOTES, 'UTF-8'); ?>" class="text-gray-600 hover:text-red-500 transition-colors font-light">
                             Login
                         </a>
                     <?php endif; ?>
@@ -43,7 +43,7 @@
 
     <!-- Mobile Menu -->
     <div id="nav-menu" class="md:hidden hidden px-4 pb-4">
-        <a href="<?php echo htmlspecialchars((string)(route('documentation')), ENT_QUOTES, 'UTF-8'); ?>" class="block py-2 text-gray-600 hover:text-red-500 font-light">Documentation</a>
+        <a href="<?php echo htmlspecialchars((string)(route('docs')), ENT_QUOTES, 'UTF-8'); ?>" class="block py-2 text-gray-600 hover:text-red-500 font-light">Docs</a>
         <a href="<?php echo htmlspecialchars((string)(route('community')), ENT_QUOTES, 'UTF-8'); ?>" class="block py-2 text-gray-600 hover:text-red-500 font-light">Community</a>
         <?php if (env('AUTH_LOGIN')): ?>
             <div class="border-t border-red-500 pt-2 mt-2">

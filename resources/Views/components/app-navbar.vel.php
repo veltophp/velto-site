@@ -14,15 +14,15 @@
 
             <!-- Desktop Nav -->
             <div class="hidden md:flex items-center space-x-8">
-                <a href="{{route('documentation')}}" class="text-gray-600 hover:text-red-500 transition-colors font-light">Documentation</a>
-                <a href="{{route('community')}}" class="text-gray-600 hover:text-red-500 transition-colors font-light">Community</a>
+                <a href="{{route('docs')}}" class="@active('/docs', 'border-red-500') border-b-2 text-gray-600 hover:text-red-500 transition-colors font-light">Docs</a>
+                <a href="{{route('community')}}" class="@active('/community', 'border-red-500') border-b-2 text-gray-600 hover:text-red-500 transition-colors font-light">Community</a>
                 @if (env('AUTH_LOGIN'))
                     @if(Auth::user())
                         <a href="{{ route('axion.dashboard') }}" class="text-gray-600 hover:text-red-500 transition-colors font-light">
                             Dashboard
                         </a>
                     @else
-                        <a href="{{ route('axion.dashboard') }}" class="text-gray-600 hover:text-red-500 transition-colors font-light">
+                        <a href="{{ route('login') }}" class="text-gray-600 hover:text-red-500 transition-colors font-light">
                             Login
                         </a>
                     @endif
@@ -43,7 +43,7 @@
 
     <!-- Mobile Menu -->
     <div id="nav-menu" class="md:hidden hidden px-4 pb-4">
-        <a href="{{route('documentation')}}" class="block py-2 text-gray-600 hover:text-red-500 font-light">Documentation</a>
+        <a href="{{route('docs')}}" class="block py-2 text-gray-600 hover:text-red-500 font-light">Docs</a>
         <a href="{{route('community')}}" class="block py-2 text-gray-600 hover:text-red-500 font-light">Community</a>
         @if (env('AUTH_LOGIN'))
             <div class="border-t border-red-500 pt-2 mt-2">
