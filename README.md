@@ -17,7 +17,6 @@ VeltoPHP 2.0 is a modern PHP framework that combines the simplicity of core PHP 
 
 ## 🚀 Why Choose VeltoPHP?
 
-- **Lightning Fast**: Achieves page generation in ~20 ms on local setups (SQLite, PHP 8.4, MacBook Pro 2015).
 - **No "Magic" Overhead**: Avoids complex abstractions, giving developers full control.
 - **Modular HMVC**: Organize your application into reusable, independent modules.
 - **Lightweight Core**: Minimal dependencies for quick setup and deployment.
