@@ -21,7 +21,7 @@ database.sqlite
 
 # ===============================
 # Composer vendor
-/vendor/
+vendor/
 
 # ===============================
 # Preserve empty dirs 
@@ -45,5 +45,3 @@ Dockerfile
 docker/
 .docker/
 .dockerignore
-
-vendor/
