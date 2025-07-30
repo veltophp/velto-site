@@ -344,6 +344,11 @@ class ThreadController extends Controller
             return to_route('community');
         }
 
+        if (!empty($searchError)) {
+            flash()->to('#form-search')->error($searchError);
+            return to_route('community');
+        }
+
         $threads = Thread::search($keyword)->desc()->paginate();
 
         return view('Community.search-result')->with('threads',$threads);

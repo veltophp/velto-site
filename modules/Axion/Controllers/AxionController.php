@@ -4,20 +4,21 @@ namespace Modules\Axion\Controllers;
 
 use Velto\Core\Controller\Controller;
 use Velto\Core\Request\Request;
+use Velto\Core\Support\Hash;
 use Velto\Core\Session\Session;
+
 
 use Modules\Auth\Models\User;
 use Modules\Auth\Models\Auth;
 use Modules\Community\Models\Thread;
 use Modules\Community\Models\Comment;
-use Modules\Community\Models\Activity;
 use Modules\Community\Models\Bookmark;
 
 class AxionController extends Controller
 {
     public function axionDashboard()
     {
-        return view('Axion.axion-dashboard',[
+        return view('axion.axion-dashboard',[
             'message' => 'Welcome to Axion Dashboard.',
         ]);
     }
@@ -32,7 +33,7 @@ class AxionController extends Controller
             $thread->commentCount = count($thread->comments());
         }
 
-        return view('Axion.axion-thread',[
+        return view('axion.axion-thread',[
             'message' => 'Welcome to Axion Dashboard.',
             'threads' => $threads,
         ]);
@@ -42,13 +43,13 @@ class AxionController extends Controller
     {
         $message = 'Hello, this is Example page!';
         
-        return view('Axion.axion-example-page')->compact($message);
+        return view('axion.axion-example-page')->compact($message);
 
     }
 
     public function axionProfile()
     {
-        return view('Axion.axion-profile');
+        return view('axion.axion-profile');
     }
 
     public function updateName(Request $request)
@@ -132,7 +133,7 @@ class AxionController extends Controller
             return to_route('axion.profile');
         }
 
-        $changePassword = User::where('id', $user->id)->update('password', bcrypt($request->input('new_password')));
+        $changePassword = User::where('id', $user->id)->update('password', Hash::make($request->input('new_password')));
 
         if (!$changePassword) {
             flash()->to('#form-change-account')->error('Failed to change password. Please try again.');
@@ -160,7 +161,7 @@ class AxionController extends Controller
             return to_route('login');
         }
 
-        if (!hash_check($password, $user->password)) {
+        if (!Hash::check($password, $user->password)) {
             flash()->to('#form-delete-account')->error('Incorrect password.');
             return to_route('axion.profile');
         }
@@ -189,7 +190,6 @@ class AxionController extends Controller
         return to_route('home');
     }
 
-
     public function axionActivity()
     {
         $userId = Auth::user()->id;
@@ -208,7 +208,7 @@ class AxionController extends Controller
             $thread->commentCount = count($thread->comments());
         }
 
-        return view('Axion.axion-activity', [
+        return view('axion.axion-activity', [
             'threads' => $threads
         ]);
     }

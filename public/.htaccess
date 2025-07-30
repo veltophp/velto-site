@@ -6,42 +6,26 @@
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteBase /
 
-    # Block access to sensitive directories
-    RewriteRule ^(storage|vendor|config|resources|modules/[^/]+/views|modules/[^/]+/config)/ - [F,L,NC]
+    RewriteRule ^(storage|vendor|config|resources|modules/.*/views|modules/.*/config)/ - [F,L]
 
-    # Redirect all requests to index.php if file or directory doesn't exist
+    <FilesMatch "(\.env|\.gitignore|composer\.(json|lock)|config\.php)$">
+        Order allow,deny
+        Deny from all
+    </FilesMatch>
+
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^ index.php [QSA,L]
-</IfModule>
 
-<IfModule mod_alias.c>
-    # Deny access to sensitive files
-    <FilesMatch "(\.env|\.sqlite|\.log|\.bak|\.gitignore|composer\.(json|lock)|config\.php)$">
-        Require all denied
-    </FilesMatch>
+    ErrorDocument 404 /index.php
 </IfModule>
 
 <IfModule mod_headers.c>
-    # Security Headers
     Header always set X-Content-Type-Options "nosniff"
     Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-XSS-Protection "1; mode=block"
     Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
-
-    # Content Security Policy (relaxed but safe)
-    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; img-src 'self' data: https://res.cloudinary.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
 </IfModule>
-
-<IfModule mod_env.c>
-    # Disable TRACE method (to prevent cross-site tracing)
-    SetEnvIf Request_Method TRACE block
-    <IfModule mod_rewrite.c>
-        RewriteCond %{ENV:block} 1
-        RewriteRule .* - [F,L]
-    </IfModule>
-</IfModule>
-
-# Custom 404 error handling
-ErrorDocument 404 /index.php

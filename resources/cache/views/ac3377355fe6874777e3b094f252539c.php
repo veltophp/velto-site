@@ -4,7 +4,6 @@
             
             <div class="flex items-center space-x-4">
                 <a href="<?php echo htmlspecialchars((string)(route('home')), ENT_QUOTES, 'UTF-8'); ?>" class="flex items-center space-x-2">
-                    <i class="fas fa-code text-red-600 text-2xl"></i>
                     <img src="https://res.cloudinary.com/drbowe2hn/image/upload/v1750857194/VeltoPHP2_la6xfv.png"
                          alt="VeltoPHP Logo"
                          class="h-10 w-10 object-contain" />

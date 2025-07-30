@@ -1866,3 +1866,43 @@ if (!function_exists('str_limit')) {
     }
 }
 
+if (!function_exists('config')) {
+    function config(string $key, $default = null)
+    {
+        static $loaded = [];
+
+        $parts = explode('.', $key);
+        $file = array_shift($parts);
+        $segments = $parts;
+
+        if (!isset($loaded[$file])) {
+            $path = BASE_PATH  ."/app/config/{$file}.php";
+
+            if (!file_exists($path)) return $default;
+
+            $loaded[$file] = require $path;
+        }
+
+        $value = $loaded[$file];
+
+        foreach ($segments as $segment) {
+            if (!is_array($value) || !array_key_exists($segment, $value)) {
+                return $default;
+            }
+            $value = $value[$segment];
+        }
+
+        return $value;
+
+    }
+
+}
+
+if (!function_exists('driverCheck')) {
+    function driverCheck(string $driver): bool
+    {
+        $cfg = config("social.{$driver}");
+        return !empty($cfg['client_id']) && !empty($cfg['client_secret']) && !empty($cfg['redirect']);
+    }
+
+}

@@ -7,6 +7,8 @@ use Velto\Core\Request\Request;
 use Velto\Core\Session\Session;
 use Velto\Core\Env\Env;
 use Velto\Core\Mail\Mail;
+use Velto\Core\Support\Hash;
+
 
 use Modules\Auth\Models\User;
 class AuthController extends Controller
@@ -43,7 +45,7 @@ class AuthController extends Controller
     
         $user = User::findBy('email', $request->email);
     
-        if (!isset($user->password) || !hash_check($request->password, $user->password)) {
+        if (!isset($user->password) || !Hash::check($request->password, $user->password)) {
             flash()->to('#form-login')->error('Wrong email or password!');
             return to_route('login');
         }
@@ -109,11 +111,10 @@ class AuthController extends Controller
         }
 
         User::create([
-            'user_id' => uvid(8),
             'name' => $request->name,
             'username' => generateUsername($request->name),
             'email' => $request->email,
-            'password' => bcrypt($request->password),
+            'password' => Hash::make($request->password),
             'email_verified' => is_email_verification_enabled() ? false : true,
         ]);
 
@@ -307,7 +308,7 @@ class AuthController extends Controller
             return to_route('forgot.password');
         }
         
-        User::where('email', $email)->update('password', bcrypt($password ));
+        User::where('email', $email)->update('password', Hash::make($password ));
 
         Session::remove("reset_password_tokens.{$decodedEmail}");
     
