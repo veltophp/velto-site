@@ -1,30 +1,49 @@
+# ===============================
 # System files
 .DS_Store
 Thumbs.db
 .Trashes
 
+# ===============================
 # Environment
 .env
 
+# ===============================
 # Logs & cache
 storage/log/
 storage/sessions/
 resources/cache/views/
 *.log
 
-# SQLite 
+# ===============================
+# SQLite
 database.sqlite
 
+# ===============================
 # Composer vendor
+/vendor/
 
+# ===============================
 # Preserve empty dirs 
 !storage/
 !storage/log/
 !storage/sessions/
 !resources/cache/views/
 
+# ===============================
 # IDE/editor settings
 .idea/
 .vscode/
 *.sublime-workspace
 *.sublime-project
+
+# ===============================
+# Docker
+docker-compose.yml
+docker-compose.*.yml
+Dockerfile
+docker/
+.docker/
+.dockerignore
+
+vendor/
