@@ -10,9 +10,15 @@ Thumbs.db
 
 # ===============================
 # Logs & cache
-storage/log/
-storage/sessions/
-resources/cache/views/
+storage/log/*
+!storage/log/.gitkeep
+
+storage/sessions/*
+!storage/sessions/.gitkeep
+
+resources/cache/views/*
+!resources/cache/views/.gitkeep
+
 *.log
 
 # ===============================
@@ -21,10 +27,10 @@ database.sqlite
 
 # ===============================
 # Composer vendor
-vendor/
+/vendor/
 
 # ===============================
-# Preserve empty dirs 
+# Preserve empty dirs (keep folders, ignore contents)
 !storage/
 !storage/log/
 !storage/sessions/
