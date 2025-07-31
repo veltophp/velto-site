@@ -21,6 +21,10 @@ resources/cache/views/*
 
 *.log
 
+#===============================
+/public/assets/*
+!/public/assets/.gitkeep
+
 # ===============================
 # SQLite
 database.sqlite
