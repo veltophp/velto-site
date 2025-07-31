@@ -6,7 +6,7 @@
 
 @section('app-content')
 <div class="min-h-screen pt-32 pb-12">
-    <div class="max-w-7xl mx-auto px-4 md:px-6">
+    <div class="max-w-7xl mx-auto px-4 md:px-2">
         <!-- User Profile -->
         <div class="bg-white border border-gray-200 rounded-xl px-6 py-4 mb-8 flex items-center justify-between">
             <div class="flex items-center">

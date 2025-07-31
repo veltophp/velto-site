@@ -17,7 +17,9 @@ storage/sessions/*
 !storage/sessions/.gitkeep
 
 resources/cache/views/*
+resources/cache/url_cache/*
 !resources/cache/views/.gitkeep
+!resources/cache/url_cache/.gitkeep
 
 *.log
 

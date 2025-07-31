@@ -6,10 +6,10 @@
 
 @section('app-content')
 <div class="min-h-screen pt-32 pb-12">
-    <div class="max-w-7xl mx-auto px-4 md:px-6">
+    <div class="max-w-7xl mx-auto px-4 md:px-2">
         <!-- Tag Header -->
         <div class="bg-white border border-gray-200 rounded-xl px-6 py-4 mb-8">
-            <div class="text-sm text-gray-600">
+            <div class="text-gray-600">
                 <a href="{{ route('community') }}" class="text-red-600 hover:underline font-medium">All Threads</a>
                 <span class="mx-2">/</span>
                 <span class="text-gray-800">{{ ucwords(str_replace('-', ' ', $tag)) }}</span>

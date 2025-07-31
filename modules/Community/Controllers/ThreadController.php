@@ -56,6 +56,8 @@ class ThreadController extends Controller
             return to_route('new.thread');
         }
 
+        $imageSave = null;
+
         if (hasFile($request, 'image')) {
             $file = $request->file('image');
             $imageName = imageName($file);
@@ -122,7 +124,6 @@ class ThreadController extends Controller
         return to_route_response('axion.thread')->successAlert('Data updated successfully!');
     }
     
-
     public function deleteThread($slug)
     {
         $userId = Auth::user()->id;
@@ -142,7 +143,6 @@ class ThreadController extends Controller
 
         return to_route_response('axion.thread')->errorAlert('Error! Failed to delete data.');
     }
-
 
     public function showTag($tag)
     {
@@ -355,7 +355,6 @@ class ThreadController extends Controller
 
     }
 
-
     public function bookmarkThread(Request $request)
     {
         $userId = Auth::user()->id;
@@ -381,7 +380,6 @@ class ThreadController extends Controller
         return to_route_response('detail.thread', ['slug' => $thread->slug])->successAlert('Added to your bookmarks');
 
     }
-
 
     public function deleteBookmark(Request $request, $slug)
     {

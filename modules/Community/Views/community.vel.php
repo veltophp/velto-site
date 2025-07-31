@@ -8,7 +8,7 @@
 <div class="min-h-screen pt-20 pb-12">
     <!-- Hero Section -->
     <div class="py-8 mb-12">
-        <div class="max-w-7xl mx-auto px-4 md:px-6">
+        <div class="max-w-7xl mx-auto px-4 md:px-2">
             <div class="flex flex-col md:flex-row items-center justify-between">
                 <div class="mb-6 md:mb-0">
                     <h1 class="text-3xl md:text-4xl font-bold mb-2">VeltoPHP Community</h1>
@@ -21,7 +21,7 @@
         </div>
     </div>
 
-    <div class="max-w-7xl mx-auto px-4 md:px-6">
+    <div class="max-w-7xl mx-auto px-4 md:px-2">
         <!-- Search and Stats -->
         <!-- Flash Message -->
         <div class="mt-4">

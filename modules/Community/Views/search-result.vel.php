@@ -6,7 +6,7 @@
 
 @section('app-content')
 <div class="min-h-screen pt-32 pb-12">
-    <div class="max-w-7xl mx-auto px-4 md:px-6">
+    <div class="max-w-7xl mx-auto px-4 md:px-2">
         <!-- Search Bar & New Thread -->
         <div class="bg-white rounded-xl mb-8">
             <div class="flex flex-col md:flex-row items-center justify-between gap-6">

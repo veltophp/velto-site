@@ -6,7 +6,7 @@
 
 @section('app-content')
 <div class="min-h-screen mt-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="max-w-7xl mx-auto px-4 md:px-2 lg:px-8 py-12">
         <div class="flex flex-col lg:flex-row gap-8">
             <!-- Left Column - Form -->
             <div class="lg:w-2/3">
