@@ -26,7 +26,7 @@
                             @foreach ($pages as $page)
                                 <a href="/docs/{{ $page['slug'] }}"
                                    class="block px-3 py-2 text-sm font-medium
-                                   {{ $currentPage === $page['slug'] ? 'bg-gray-100 text-blue-600' : 'text-gray-900 hover:bg-gray-50' }}
+                                   {{ $currentPage === $page['slug'] ? 'bg-red-100 text-red-600' : 'text-gray-900 hover:bg-gray-50' }}
                                    rounded">
                                     {{ $page['label'] }}
                                 </a>
