@@ -47,7 +47,7 @@ class ThreadController extends Controller
             'title'     => 'required|string|max:255',
             'content'   => 'required|string|max:2048',
             'tags'      => 'nullable|string|max:255',
-            'image'     => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image'     => 'nullable|image|mimes:jpeg,png,jpg,gif|max:1024',
 
         ]);
         

@@ -4,3 +4,272 @@ body{
     font-optical-sizing: auto;
     font-style: normal;    
 }
+
+/* For docs  */
+
+.docs-content {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.7;
+    color: #374151; /* gray-700 */
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+/* Heading styles */
+.docs-content h1 {
+    font-size: 1.75rem; /* 28px */
+    font-weight: 700;
+    margin: 2.5rem 0 1.25rem;
+    color: #111827; /* gray-900 */
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 0.5rem;
+}
+
+.docs-content h2 {
+    font-size: 1.5rem; /* 24px */
+    font-weight: 600;
+    margin: 2rem 0 1rem;
+    color: #111827;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px dashed #e5e7eb;
+}
+
+.docs-content h3 {
+    font-size: 1.25rem; /* 20px */
+    font-weight: 600;
+    margin: 1.75rem 0 0.75rem;
+    color: #1f2937; /* gray-800 */
+}
+
+.docs-content h4 {
+    font-size: 1.125rem; /* 18px */
+    font-weight: 600;
+    margin: 1.5rem 0 0.5rem;
+    color: #1f2937;
+}
+
+.docs-content h5 {
+    font-size: 1rem; /* 16px */
+    font-weight: 600;
+    margin: 1.25rem 0 0.5rem;
+    color: #374151; /* gray-700 */
+}
+
+.docs-content h6 {
+    font-size: 0.875rem; /* 14px */
+    font-weight: 600;
+    margin: 1rem 0 0.5rem;
+    color: #4b5563; /* gray-600 */
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Text elements */
+.docs-content p {
+    margin-bottom: 1.25rem;
+    color: #374151; /* gray-700 */
+}
+
+.docs-content a {
+    color: #2563eb; /* blue-600 */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.docs-content a:hover {
+    color: #1d4ed8; /* blue-700 */
+    text-decoration: underline;
+}
+
+/* Lists */
+.docs-content ul,
+.docs-content ol {
+    margin-left: 1.25rem;
+    margin-bottom: 1.25rem;
+    padding-left: 0.5rem;
+}
+
+.docs-content ul {
+    list-style-type: disc;
+}
+
+.docs-content ol {
+    list-style-type: decimal;
+}
+
+.docs-content li {
+    margin-bottom: 0.5rem;
+    padding-left: 0.25rem;
+}
+
+/* code block */
+
+.docs-content pre {
+    background-color: #1e1d1d;
+    color: #d4d4d4;
+    padding: 1rem 1rem 1rem 3.5rem; /* Tambah padding kiri untuk nomor */
+    border-radius: 6px;
+    overflow-x: auto;
+    margin: 1.75rem 0;
+    font-family: 'Cascadia Code', 'Consolas', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    tab-size: 4;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border: 1px solid #252525;
+    counter-reset: line; /* Reset counter untuk nomor baris */
+}
+
+/* Garis nomor dengan angka */
+.docs-content pre code {
+    position: relative;
+    display: block;
+}
+
+.docs-content pre code .line {
+    position: relative;
+    display: block;
+    padding-left: 0.5rem;
+}
+
+.docs-content pre code .line::before {
+    counter-increment: line;
+    content: counter(line);
+    position: absolute;
+    left: -3rem;
+    width: 2.5rem;
+    text-align: right;
+    color: #6e7681; /* Warna nomor baris VS Code */
+    font-size: 0.8em;
+    user-select: none;
+}
+
+/* Highlight line (opsional) */
+.docs-content pre code .line.highlight {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.docs-content pre code .line.highlight::before {
+    color: #5ca8f0;
+    font-weight: bold;
+}
+
+
+/* Tambahkan garis nomor seperti VS Code */
+.docs-content pre::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 40px;
+    background-color: #2d2d2d;
+    border-right: 1px solid #1a1a1a;
+    border-radius: 6px 0 0 6px;
+}
+
+/* Syntax Highlighting ala VS Code Dark+ */
+.docs-content .token.comment,
+.docs-content .token.prolog,
+.docs-content .token.doctype,
+.docs-content .token.cdata {
+    color: #6A9955; /* Hijau untuk komentar */
+}
+
+.docs-content .token.punctuation {
+    color: #d4d4d4;
+}
+
+.docs-content .token.property,
+.docs-content .token.tag,
+.docs-content .token.boolean,
+.docs-content .token.number,
+.docs-content .token.constant,
+.docs-content .token.symbol,
+.docs-content .token.deleted {
+    color: #B5CEA8; /* Hijau muda untuk angka/boolean */
+}
+
+.docs-content .token.selector,
+.docs-content .token.attr-name,
+.docs-content .token.string,
+.docs-content .token.char,
+.docs-content .token.builtin,
+.docs-content .token.inserted {
+    color: #CE9178; /* Oranye untuk string */
+}
+
+.docs-content .token.operator,
+.docs-content .token.entity,
+.docs-content .token.url,
+.docs-content .language-css .token.string,
+.docs-content .style .token.string {
+    color: #d4d4d4;
+}
+
+.docs-content .token.atrule,
+.docs-content .token.attr-value,
+.docs-content .token.keyword {
+    color: #569CD6; /* Biru untuk keyword */
+}
+
+.docs-content .token.function,
+.docs-content .token.class-name {
+    color: #f2f2a4; /* Kuning muda untuk fungsi */
+}
+
+.docs-content .token.regex,
+.docs-content .token.important,
+.docs-content .token.variable {
+    color: #D16969; /* Merah muda */
+}
+
+/* Scrollbar untuk code block */
+.docs-content pre::-webkit-scrollbar {
+    height: 8px;
+}
+
+.docs-content pre::-webkit-scrollbar-track {
+    background: #252525;
+    border-radius: 0 0 6px 6px;
+}
+
+.docs-content pre::-webkit-scrollbar-thumb {
+    background: #4e4e4e;
+    border-radius: 4px;
+}
+
+.docs-content pre::-webkit-scrollbar-thumb:hover {
+    background: #707070;
+}
+
+/* Copy button (opsional) */
+.docs-content pre {
+    position: relative;
+}
+
+.docs-content .copy-code {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    background: #3a3d41;
+    border: none;
+    border-radius: 4px;
+    color: #d4d4d4;
+    cursor: pointer;
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.docs-content pre:hover .copy-code {
+    opacity: 1;
+}
+
+.docs-content .copy-code:hover {
+    background: #45494e;
+}

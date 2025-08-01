@@ -5,39 +5,60 @@
 @endsection
 
 @section('app-content')
-<div class="font-thin">
-    <div class="pt-32">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <div class="text-center font-light text-sm text-gray-700 dark:text-gray-300 py-6 px-4">
-                    <span class="italic">Bug report, contribution, or donation</span> — email us at 
-                    <a href="mailto:dev@veltophp.com" class="underline text-red-600 dark:text-red-400 hover:text-red-500">dev@veltophp.com</a>
-                </div> 
+<div class="font-light">
+    <div class="pt-16 md:pt-24">
+        <div class="max-w-7xl mx-auto px-2 sm:px-4">
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden fixed right-4 top-4 z-50 p-2 rounded-md bg-gray-100 text-gray-500 hover:bg-gray-200 focus:outline-none">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
 
-                <h1 class="text-5xl md:text-6xl font-thin text-gray-900 mb-4">
-                    Documentation |
-                    <span class="relative text-red-500 ml-2 inline-block">
-                        VeltoPHP
-                        <span class="absolute -top-2 -right-4 text-sm text-red-500 font-light">V2</span>
-                    </span>
-                </h1>                
+            <div class="flex flex-col md:flex-row">
+                <!-- Left sidebar navigation -->
+                <div id="sidebar" class="hidden md:block w-64 pr-8 fixed h-screen overflow-y-auto border-r border-gray-200 bg-white z-40">
+                    @foreach ($docPages as $section => $pages)
+                        <div class="pt-4 space-y-1">
+                            <h3 class="px-3 py-2 text-sm font-semibold text-gray-500 uppercase tracking-wider">
+                                {{ $section }}
+                            </h3>
+                            @foreach ($pages as $page)
+                                <a href="/docs/{{ $page['slug'] }}"
+                                   class="block px-3 py-2 text-sm font-medium
+                                   {{ $currentPage === $page['slug'] ? 'bg-gray-100 text-blue-600' : 'text-gray-900 hover:bg-gray-50' }}
+                                   rounded">
+                                    {{ $page['label'] }}
+                                </a>
+                            @endforeach
+                        </div>
+                    @endforeach
+                </div>                
                 
-                <div class="mt-8 text-sm text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
-                    <p class="italic">
-                        The VeltoPHP team is currently writing the official documentation for version 2.0.
-                        Please be patient and stay tuned for upcoming updates. Thank you for your support!
-                    </p>
-                </div> 
-                <div class="mt-24">
-                    <a href="https://github.com/veltophp/velto" target="_blank" rel="noopener" class="inline-flex items-center px-4 py-3 bg-red-500 text-white text-sm font-semibold rounded-lg hover:bg-gray-800 transition">
-                        <svg class="w-5 h-5 mr-2 fill-current" viewBox="0 0 24 24">
-                            <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.92.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.87-1.54-3.87-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.07-.73.08-.72.08-.72 1.19.08 1.81 1.22 1.81 1.22 1.05 1.8 2.75 1.28 3.42.98.11-.76.41-1.28.74-1.57-2.55-.29-5.23-1.28-5.23-5.71 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.18a10.94 10.94 0 012.87-.39c.97 0 1.95.13 2.87.39 2.18-1.49 3.14-1.18 3.14-1.18.63 1.57.24 2.73.12 3.02.74.81 1.18 1.84 1.18 3.1 0 4.44-2.69 5.41-5.25 5.69.42.36.79 1.09.79 2.2 0 1.59-.01 2.87-.01 3.26 0 .31.21.68.8.56A10.51 10.51 0 0023.5 12C23.5 5.73 18.27.5 12 .5z"/>
-                        </svg>
-                        Visit GitHub
-                    </a>                    
-                </div>                              
+
+                <!-- Main content area -->
+                <div class="w-full md:pl-72 md:pr-56 pt-4 md:pt-0">
+                    <div class="prose docs-content">
+                        {!!$html!!}
+                    </div>                    
+                </div>
+
+                <!-- Right sidebar -->
+                <div class="hidden lg:block fixed right-0 w-56 h-screen overflow-y-auto border-l border-gray-200 bg-white pt-4 px-4">
+                    {{--  --}}
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    // Toggle mobile menu
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+        const sidebar = document.getElementById('sidebar');
+        sidebar.classList.toggle('hidden');
+    });
+</script>
+
+
 @endsection
