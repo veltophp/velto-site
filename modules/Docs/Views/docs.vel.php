@@ -7,7 +7,7 @@
 @section('app-content')
 <div class="font-light">
     <div class="pt-12 md:pt-24">
-        <div class="max-w-7xl mx-auto px-2 sm:px-4">
+        <div class="max-w-7xl mx-auto px-4 md:px-0">
             <!-- Mobile menu button -->
             <button id="mobile-menu-button" class="md:hidden fixed right-4 top-4 z-50 p-2 rounded-md bg-gray-100 text-gray-500 hover:bg-gray-200 focus:outline-none">
                 <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
