@@ -7,12 +7,12 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
         <!-- Primary Meta Tags -->
-        <title>@yield('title')</title>
+        <title>@yield('title', 'VeltoPHP 2.0 | Lightweight HMVC PHP Framework')</title>
         <meta name="description" content="A simple, fast, and lightweight HMVC PHP framework designed for rapid development without the overhead of 'magic'. Built for developers who value clarity, performance, and modularity.">
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://veltophp.com/">
-        <meta property="og:title" content="VeltoPHP 2.0 | Lightweight HMVC PHP Framework">
+        <meta property="og:title" content="@yield('title', 'VeltoPHP 2.0 | Lightweight HMVC PHP Framework')">
         <meta property="og:description" content="A simple, fast, and lightweight HMVC PHP framework designed for rapid development without the overhead of 'magic'. Built for developers who value clarity, performance, and modularity.">
         <meta property="og:image" content=@yield('ogImage','https://res.cloudinary.com/drbowe2hn/image/upload/v1750857194/VeltoPHP2_la6xfv.png')>
 

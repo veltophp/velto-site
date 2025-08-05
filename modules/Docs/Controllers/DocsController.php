@@ -8,14 +8,14 @@ require_once __DIR__ . '/../Helpers/helper.php';
 
 class DocsController extends Controller
 {
-    public function docs(string $page = 'index')
+    public function docs(string $page = 'documentation')
     {
         $pages = getDocPages();
         $matched = null;
     
         // Tangani khusus jika halaman adalah 'index' (yaitu /docs)
-        if ($page === 'index') {
-            $indexPath = __DIR__ . '/../Contents/index.md';
+        if ($page === 'documentation') {
+            $indexPath = __DIR__ . '/../Contents/documentation.md';
         
             if (!file_exists($indexPath)) {
                 http_response_code(404);

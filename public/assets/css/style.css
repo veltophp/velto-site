@@ -8,23 +8,39 @@ body{
 /* For docs  */
 
 .docs-content {
-    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    font-family: "Nunito", sans-serif;
     line-height: 1.7;
     color: #374151; /* gray-700 */
     max-width: 768px;
     margin: 0 auto;
-    padding: 1.5rem;
+    /* padding: 1.5rem; */
 }
 
 /* Heading styles */
 .docs-content h1 {
     font-size: 1.75rem; /* 28px */
     font-weight: 700;
-    margin: 2.5rem 0 1.25rem;
+    margin: 1.5rem 0 2rem;
     color: #111827; /* gray-900 */
     border-bottom: 1px solid #e5e7eb;
     padding-bottom: 0.5rem;
+    position: relative; /* penting agar ::before bisa diposisikan relatif ke h1 */
 }
+
+.docs-content h1::before {
+    content: "#";
+    position: absolute;
+    left: -1rem; /* jarak dari kiri h1 */
+    color: #111827; /* gray-400 */
+    opacity: 0;
+    transition: ease;
+    font-weight: 700;
+}
+
+.docs-content h1:hover::before {
+    opacity: 1;
+}
+
 
 .docs-content h2 {
     font-size: 1.5rem; /* 24px */
@@ -69,17 +85,49 @@ body{
 .docs-content p {
     margin-bottom: 1.25rem;
     color: #374151; /* gray-700 */
+    font-weight: 400;
+
 }
 
 .docs-content a {
-    color: #2563eb; /* blue-600 */
-    text-decoration: none;
-    font-weight: 500;
+    color: #f33737; /* blue-600 */
+    text-decoration: underline;
+    font-weight: 600;
     transition: color 0.2s;
 }
 
+.docs-content strong {
+    color: #f33737; /* gray-900 */
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+/* Italic text (usually <em>) */
+.docs-content em {
+    font-style: italic;
+    color: #374151; /* gray-700 */
+}
+
+/* Underlined text (you may use <u> in your Markdown parser if supported) */
+.docs-content u {
+    text-decoration: underline;
+    text-decoration-color: #2563eb; /* blue-600 */
+    text-underline-offset: 2px;
+}
+
+/* Blockquote style */
+.docs-content blockquote {
+    border-left: 4px solid #f33737; /* red-500 */
+    background-color: #f1f5f9; /* gray-100 */
+    padding: 0.75rem 1rem;
+    margin: 1rem 0;
+    font-style: italic;
+    color: #374151; /* gray-700 */
+}
+
+
 .docs-content a:hover {
-    color: #1d4ed8; /* blue-700 */
+    color: #f33737; /* blue-700 */
     text-decoration: underline;
 }
 

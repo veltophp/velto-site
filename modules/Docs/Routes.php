@@ -4,11 +4,8 @@ use Velto\Core\Route\Route;
 use Modules\Docs\Controllers\DocsController;
 
 
-// Route::get('/docs', [DocsController::class, 'docs'])->name('docs');
-// Route::get('/docs/{page}', [DocsController::class, 'docs']);
-
 Route::get('/docs', function () {
-    return (new DocsController)->docs('index');
+    return (new DocsController)->docs('documentation');
 })->name('docs');
 
 Route::get('/docs/{a}/{b}', function ($a, $b) {

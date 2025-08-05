@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
 @section('title')
-    Docs | VeltoPHP V2.0
+{{ ucwords(str_replace('-', ' ', $currentPage)) }}
 @endsection
 
 @section('app-content')
 <div class="font-light">
-    <div class="pt-16 md:pt-24">
+    <div class="pt-12 md:pt-24">
         <div class="max-w-7xl mx-auto px-2 sm:px-4">
             <!-- Mobile menu button -->
             <button id="mobile-menu-button" class="md:hidden fixed right-4 top-4 z-50 p-2 rounded-md bg-gray-100 text-gray-500 hover:bg-gray-200 focus:outline-none">
@@ -37,15 +37,35 @@
                 
 
                 <!-- Main content area -->
-                <div class="w-full md:pl-72 md:pr-56 pt-4 md:pt-0">
+                <div class="w-full md:pl-72 md:pr-56">
                     <div class="prose docs-content">
                         {!!$html!!}
                     </div>                    
                 </div>
 
                 <!-- Right sidebar -->
-                <div class="hidden lg:block fixed right-0 w-56 h-screen overflow-y-auto border-l border-gray-200 bg-white pt-4 px-4">
-                    {{--  --}}
+                <div class="hidden lg:block fixed right-0 w-72 h-screen overflow-y-auto border-l border-gray-200 bg-white pt-4 px-4">
+                    <img src="https://res.cloudinary.com/drbowe2hn/image/upload/v1750857194/VeltoPHP2_la6xfv.png"
+                         alt="VeltoPHP Logo"
+                         class="h-auto w-32 object-contain" />
+                    <span class="text-xl font-medium text-gray-900">Velto<span class="text-red-500">PHP</span> V2</span>
+                    
+                    <div class="mt-6 p-6 bg-red-50 border-l-4 border-red-400 text-red-800 rounded-md text-sm">
+                        <h2 class="text-lg font-semibold mb-2">Documentation in Progress</h2>
+                        <p class="mb-2">
+                            This documentation is currently <strong>under active development</strong>. Some features, syntax, or behaviors described here may still be evolving as VeltoPHP continues to grow.
+                        </p>
+                        <p class="mb-2">
+                            We truly value your feedback! If you notice outdated sections, unclear explanations, or have suggestions to improve the documentation or framework itself, please don’t hesitate to reach out:
+                        </p>
+                        <ul class="list-disc list-inside mb-2">
+                            <li><a href="mailto:dev@veltophp.com" class="text-blue-600 hover:underline">dev@veltophp.com</a></li>
+                            <li><a href="https://veltophp.com/community" target="_blank" class="text-blue-600 hover:underline">veltophp.com/community</a></li>
+                        </ul>
+                        <p>
+                            Your insights, ideas, and bug reports are essential to shaping the future of VeltoPHP.
+                        </p>
+                    </div>                    
                 </div>
             </div>
         </div>
